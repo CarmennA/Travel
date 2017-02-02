@@ -1,5 +1,8 @@
 <?php
   include 'restConsumer.php';
+  
+  $result = CallAPI("GET", "https://restcountries.eu/rest/v1/alpha/co");
+  echo $result["capital"];
 ?>
 
 <!DOCTYPE html>
