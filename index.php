@@ -13,7 +13,7 @@ http://www.templatemo.com/tm-475-holiday
   <link rel="stylesheet" type="text/css" href="css/search_styles.css">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">  
+  <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
   <link href="css/flexslider.css" rel="stylesheet">
   <link href="css/templatemo-style.css" rel="stylesheet">
 
@@ -31,7 +31,7 @@ http://www.templatemo.com/tm-475-holiday
   		<div class="container">
   			<div class="row">
   				<div class="col-lg-6 col-md-4 col-sm-3 tm-site-name-container">
-  					<a href="#" class="tm-site-name">Holiday</a>	
+  					<a href="#" class="tm-site-name">Holiday</a>
   				</div>
 	  			<div class="col-lg-6 col-md-8 col-sm-9">
 	  				<div class="mobile-menu-icon">
@@ -44,12 +44,12 @@ http://www.templatemo.com/tm-475-holiday
 							<li><a href="tours.html">Our Tours</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
-					</nav>		
-	  			</div>				
+					</nav>
+	  			</div>
   			</div>
-  		</div>	  	
+  		</div>
   	</div>
-	
+
 	<!-- Banner -->
 	<section class="tm-banner">
 		<!-- Flexslider -->
@@ -66,7 +66,7 @@ http://www.templatemo.com/tm-475-holiday
 									<div class="input-group col-md-12">
 										<input type="text" class="form-control input-lg" placeholder="Buscar" />
 										<span class="input-group-btn">
-											<button class="btn btn-info btn-lg" type="button">
+											<button class="btn btn-lg" type="button">
 												<i class="glyphicon glyphicon-search"></i>
 											</button>
 										</span>
@@ -76,7 +76,7 @@ http://www.templatemo.com/tm-475-holiday
 						</div>
 					</div>
 				</div>
-				<img src="img/banner-1.jpg" alt="Image" />	
+				<img src="img/banner-1.jpg" alt="Image" />
 		    </li>
 		    <li>
 			    <div class="tm-banner-inner">
@@ -89,7 +89,7 @@ http://www.templatemo.com/tm-475-holiday
 									<div class="input-group col-md-12">
 										<input type="text" class="form-control input-lg" placeholder="Buscar" />
 										<span class="input-group-btn">
-											<button class="btn btn-info btn-lg" type="button">
+											<button class="btn btn-lg" type="button">
 												<i class="glyphicon glyphicon-search"></i>
 											</button>
 										</span>
@@ -97,7 +97,7 @@ http://www.templatemo.com/tm-475-holiday
 								</div>
 							</div>
 						</div>
-					</div>	
+					</div>
 				</div>
 		      <img src="img/banner-2.jpg" alt="Image" />
 		    </li>
@@ -112,7 +112,7 @@ http://www.templatemo.com/tm-475-holiday
 									<div class="input-group col-md-12">
 										<input type="text" class="form-control input-lg" placeholder="Buscar" />
 										<span class="input-group-btn">
-											<button class="btn btn-info btn-lg" type="button">
+											<button class="btn btn-lg" type="button">
 												<i class="glyphicon glyphicon-search"></i>
 											</button>
 										</span>
@@ -125,10 +125,10 @@ http://www.templatemo.com/tm-475-holiday
 		      <img src="img/banner-3.jpg" alt="Image" />
 		    </li>
 		  </ul>
-		</div>	
+		</div>
 	</section>
 
-	<!-- gray bg -->	
+	<!-- gray bg -->
 	<section class="container tm-home-section-1" id="more">
 		<div class="row">
 			<div class="col-lg-4 col-md-4 col-sm-6">
@@ -156,7 +156,7 @@ http://www.templatemo.com/tm-475-holiday
 												<option value="chatrium">Chatrium</option>
 												<option value="fourseasons">Four Seasons</option>
 												<option value="hilton">Hilton</option>
-											</select> 
+											</select>
 							          	</div>
 							          	<div class="form-group">
 							                <div class='input-group date' id='datetimepicker1'>
@@ -182,12 +182,12 @@ http://www.templatemo.com/tm-475-holiday
 												<option value="3">3</option>
 												<option value="4">4</option>
 												<option value="5p">5+</option>
-											</select> 
+											</select>
 							            </div>
-									</div>							
+									</div>
 						            <div class="form-group tm-yellow-gradient-bg text-center">
 						            	<button type="submit" name="submit" class="tm-yellow-btn">Check Now</button>
-						            </div>  
+						            </div>
 								</form>
 							</div>
 					    </div>
@@ -202,7 +202,7 @@ http://www.templatemo.com/tm-475-holiday
 												<option value="chatrium">Mercedes-Benz</option>
 												<option value="fourseasons">Toyota</option>
 												<option value="hilton">Honda</option>
-											</select> 
+											</select>
 							          	</div>
 							          	<div class="form-group">
 							                <div class='input-group date-time' id='datetimepicker3'>
@@ -226,17 +226,17 @@ http://www.templatemo.com/tm-475-holiday
 							            	 	<option value="">Child Seat</option>
 												<option value="">GPS Navigator</option>
 												<option value="">Insurance</option>
-											</select> 
-							          	</div>							           
-									</div>							
+											</select>
+							          	</div>
+									</div>
 						            <div class="form-group tm-yellow-gradient-bg text-center">
 						            	<button type="submit" name="submit" class="tm-yellow-btn">Check Now</button>
-						            </div>  
+						            </div>
 								</form>
 							</div>
-					    </div>				    
+					    </div>
 					</div>
-				</div>								
+				</div>
 			</div>
 
 			<div class="col-lg-4 col-md-4 col-sm-6">
@@ -246,9 +246,9 @@ http://www.templatemo.com/tm-475-holiday
 						<div class="tm-green-gradient-bg tm-city-price-container">
 							<span>New York</span>
 							<span>$6,600</span>
-						</div>	
-					</a>			
-				</div>				
+						</div>
+					</a>
+				</div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-6">
 				<div class="tm-home-box-1 tm-home-box-1-2 tm-home-box-1-right">
@@ -257,23 +257,23 @@ http://www.templatemo.com/tm-475-holiday
 						<div class="tm-red-gradient-bg tm-city-price-container">
 							<span>Paris</span>
 							<span>$4,200</span>
-						</div>	
-					</a>					
-				</div>				
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
-	
+
 		<div class="section-margin-top">
-			<div class="row">				
+			<div class="row">
 				<div class="tm-section-header">
 					<div class="col-lg-3 col-md-3 col-sm-3"><hr></div>
 					<div class="col-lg-6 col-md-6 col-sm-6"><h2 class="tm-section-title">Lorem Ipsum Dolor</h2></div>
-					<div class="col-lg-3 col-md-3 col-sm-3"><hr></div>	
+					<div class="col-lg-3 col-md-3 col-sm-3"><hr></div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-					<div class="tm-home-box-2">						
+					<div class="tm-home-box-2">
 						<img src="img/index-03.jpg" alt="image" class="img-responsive">
 						<h3>Proin Gravida Nibhvel Lorem Quis Bind</h3>
 						<p class="tm-date">28 March 2016</p>
@@ -285,7 +285,7 @@ http://www.templatemo.com/tm-475-holiday
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-					<div class="tm-home-box-2">						
+					<div class="tm-home-box-2">
 					    <img src="img/index-04.jpg" alt="image" class="img-responsive">
 						<h3>Proin Gravida Nibhvel Lorem Quis Bind</h3>
 						<p class="tm-date">26 March 2016</p>
@@ -297,7 +297,7 @@ http://www.templatemo.com/tm-475-holiday
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-					<div class="tm-home-box-2">						
+					<div class="tm-home-box-2">
 					    <img src="img/index-05.jpg" alt="image" class="img-responsive">
 						<h3>Proin Gravida Nibhvel Lorem Quis Bind</h3>
 						<p class="tm-date">24 March 2016</p>
@@ -309,7 +309,7 @@ http://www.templatemo.com/tm-475-holiday
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-					<div class="tm-home-box-2 tm-home-box-2-right">						
+					<div class="tm-home-box-2 tm-home-box-2-right">
 					    <img src="img/index-06.jpg" alt="image" class="img-responsive">
 						<h3>Proin Gravida Nibhvel Lorem Quis Bind</h3>
 						<p class="tm-date">22 March 2016</p>
@@ -323,12 +323,12 @@ http://www.templatemo.com/tm-475-holiday
 			</div>
 			<div class="row">
 				<div class="col-lg-12">
-					<p class="home-description">Holiday is free Bootstrap v3.3.5 responsive template for tour and travel websites. You can download and use this layout for any purpose. You do not need to provide a credit link to us. If you have any question, feel free to <a href="http://www.facebook.com/templatemo" target="_parent">contact us</a>. Credit goes to <a rel="nofollow" href="http://unsplash.com" target="_parent">Unspash</a> for images used in this template.</p>					
+					<p class="home-description">Holiday is free Bootstrap v3.3.5 responsive template for tour and travel websites. You can download and use this layout for any purpose. You do not need to provide a credit link to us. If you have any question, feel free to <a href="http://www.facebook.com/templatemo" target="_parent">contact us</a>. Credit goes to <a rel="nofollow" href="http://unsplash.com" target="_parent">Unspash</a> for images used in this template.</p>
 				</div>
-			</div>			
+			</div>
 		</div>
-	</section>		
-	
+	</section>
+
 	<!-- white bg -->
 	<section class="tm-white-bg section-padding-bottom">
 		<div class="container">
@@ -336,13 +336,13 @@ http://www.templatemo.com/tm-475-holiday
 				<div class="tm-section-header section-margin-top">
 					<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>
 					<div class="col-lg-4 col-md-6 col-sm-6"><h2 class="tm-section-title">Popular Packages</h2></div>
-					<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>	
+					<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>
 				</div>
 				<div class="col-lg-6">
 					<div class="tm-home-box-3">
 						<div class="tm-home-box-3-img-container">
-							<img src="img/index-07.jpg" alt="image" class="img-responsive">	
-						</div>						
+							<img src="img/index-07.jpg" alt="image" class="img-responsive">
+						</div>
 						<div class="tm-home-box-3-info">
 							<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
 					        <div class="tm-home-box-2-container">
@@ -350,14 +350,14 @@ http://www.templatemo.com/tm-475-holiday
 							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
 							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
 						</div>
-						</div>						
-					</div>					
+						</div>
+					</div>
 			     </div>
 			     <div class="col-lg-6">
 			        <div class="tm-home-box-3">
 						<div class="tm-home-box-3-img-container">
-							<img src="img/index-08.jpg" alt="image" class="img-responsive">	
-						</div>						
+							<img src="img/index-08.jpg" alt="image" class="img-responsive">
+						</div>
 						<div class="tm-home-box-3-info">
 							<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
 					        <div class="tm-home-box-2-container">
@@ -365,14 +365,14 @@ http://www.templatemo.com/tm-475-holiday
 							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
 							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
 						</div>
-						</div>						
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 				    <div class="tm-home-box-3">
 						<div class="tm-home-box-3-img-container">
-							<img src="img/index-09.jpg" alt="image" class="img-responsive">	
-						</div>						
+							<img src="img/index-09.jpg" alt="image" class="img-responsive">
+						</div>
 						<div class="tm-home-box-3-info">
 							<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
 					        <div class="tm-home-box-2-container">
@@ -380,14 +380,14 @@ http://www.templatemo.com/tm-475-holiday
 							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
 							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
 						</div>
-						</div>						
+						</div>
 					</div>
 			    </div>
 			    <div class="col-lg-6">
 			        <div class="tm-home-box-3">
 						<div class="tm-home-box-3-img-container">
-							<img src="img/index-10.jpg" alt="image" class="img-responsive">	
-						</div>						
+							<img src="img/index-10.jpg" alt="image" class="img-responsive">
+						</div>
 						<div class="tm-home-box-3-info">
 							<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
 					        <div class="tm-home-box-2-container">
@@ -395,20 +395,20 @@ http://www.templatemo.com/tm-475-holiday
 							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
 							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
 						</div>
-						</div>						
+						</div>
 					</div>
 			   	</div>
-			</div>		
+			</div>
 		</div>
 	</section>
 	<footer class="tm-black-bg">
 		<div class="container">
 			<div class="row">
-				<p class="tm-copyright-text">Copyright &copy; 2084 Your Company Name 
-                
+				<p class="tm-copyright-text">Copyright &copy; 2084 Your Company Name
+
                 | Designed by <a rel="nofollow" href="http://www.templatemo.com" target="_parent">templatemo</a></p>
 			</div>
-		</div>		
+		</div>
 	</footer>
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      		<!-- jQuery -->
   	<script type="text/javascript" src="js/moment.js"></script>							<!-- moment.js -->
@@ -448,15 +448,15 @@ http://www.templatemo.com/tm-475-holiday
 			    }
 		  	});
 		});
-		
+
 		// Load Flexslider when everything is loaded.
-		$(window).load(function() {	  		
+		$(window).load(function() {
 			// Vimeo API nonsense
 
 /*
 			  var player = document.getElementById('player_1');
 			  $f(player).addEvent('ready', ready);
-			 
+
 			  function addEvent(element, eventName, callback) {
 			    if (element.addEventListener) {
 			      element.addEventListener(eventName, callback, false)
@@ -464,7 +464,7 @@ http://www.templatemo.com/tm-475-holiday
 			      element.attachEvent(eventName, callback, false);
 			    }
 			  }
-			 
+
 			  function ready(player_id) {
 			    var froogaloop = $f(player_id);
 			    froogaloop.addEvent('play', function(data) {
@@ -476,8 +476,8 @@ http://www.templatemo.com/tm-475-holiday
 			  }
 */
 
-			 
-			 
+
+
 			  // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
 /*
 
@@ -496,7 +496,7 @@ http://www.templatemo.com/tm-475-holiday
 */
 
 
-			  
+
 
 //	For images only
 		    $('.flexslider').flexslider({
