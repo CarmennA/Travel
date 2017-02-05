@@ -1,0 +1,8 @@
+D:\apps\data\CountriesScriptGenerator\CountriesScriptGenerator\bin\Debug\CountriesScriptGenerator.exe.config
+D:\apps\data\CountriesScriptGenerator\CountriesScriptGenerator\bin\Debug\CountriesScriptGenerator.exe
+D:\apps\data\CountriesScriptGenerator\CountriesScriptGenerator\bin\Debug\CountriesScriptGenerator.pdb
+D:\apps\data\CountriesScriptGenerator\CountriesScriptGenerator\bin\Debug\Newtonsoft.Json.dll
+D:\apps\data\CountriesScriptGenerator\CountriesScriptGenerator\bin\Debug\Newtonsoft.Json.xml
+D:\apps\data\CountriesScriptGenerator\CountriesScriptGenerator\obj\Debug\CountriesScriptGenerator.csprojResolveAssemblyReference.cache
+D:\apps\data\CountriesScriptGenerator\CountriesScriptGenerator\obj\Debug\CountriesScriptGenerator.exe
+D:\apps\data\CountriesScriptGenerator\CountriesScriptGenerator\obj\Debug\CountriesScriptGenerator.pdb
