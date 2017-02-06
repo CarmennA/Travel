@@ -40,7 +40,7 @@ http://www.templatemo.com/tm-475-holiday
 	  				<nav class="tm-nav">
 						<ul>
 							<li><a href="index.html" class="active">Home</a></li>
-							<li><a href="about.html">About</a></li>
+							<li><a href="popular.php?country='Anguilla'">Popular</a></li>
 							<li><a href="tours.html">Our Tours</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
