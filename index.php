@@ -49,6 +49,8 @@ http://www.templatemo.com/tm-475-holiday
   			</div>
   		</div>
   	</div>
+	
+	<textarea id="test"></textarea>
 
 	<!-- Banner -->
 	<section class="tm-banner">
@@ -254,6 +256,10 @@ http://www.templatemo.com/tm-475-holiday
 	<script src="js/jquery.fitvid.js"></script>
 -->
    	<script type="text/javascript" src="js/templatemo-script.js"></script>      		<!-- Templatemo Script -->
+	
+	<script type="text/javascript" src="js/http-helper.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	
 	<script>
 		// HTML document is loaded. DOM is ready.
 		$(function() {
