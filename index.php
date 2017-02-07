@@ -54,81 +54,49 @@ http://www.templatemo.com/tm-475-holiday
 
 	<!-- Banner -->
 	<section class="tm-banner">
-		<!-- Flexslider -->
 		<div class="flexslider flexslider-banner">
-		  <ul class="slides">
-		    <li>
-			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Find <span class="tm-yellow-text">The Best</span> Place</h1>
-					<p class="tm-banner-subtitle">For Your Holidays</p>
-					<div class="container">
-						<div class="row search-row">
-							<div class="col-md-12">
-								<div class="custom-search-input">
-									<div class="input-group col-md-12">
-										<input type="text" class="form-control input-lg" placeholder="Buscar" />
-										<span class="input-group-btn">
-											<button class="btn btn-lg" type="button">
-												<i class="glyphicon glyphicon-search"></i>
-											</button>
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
+			<ul class="slides">
+				<li>
+					<div class="tm-banner-inner">
+						<h1 class="tm-banner-title">Find <span class="tm-yellow-text">The Best</span> Place</h1>
+						<p class="tm-banner-subtitle">For Your Holidays</p>
 					</div>
-				</div>
-				<img src="img/banner-1.jpg" alt="Image" />
-		    </li>
-		    <li>
-			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Lorem <span class="tm-yellow-text">Ipsum</span> Dolor</h1>
-					<p class="tm-banner-subtitle">Wonderful Destinations</p>
-					<div class="container">
-						<div class="row search-row">
-							<div class="col-md-12">
-								<div class="custom-search-input">
-									<div class="input-group col-md-12">
-										<input type="text" class="form-control input-lg" placeholder="Buscar" />
-										<span class="input-group-btn">
-											<button class="btn btn-lg" type="button">
-												<i class="glyphicon glyphicon-search"></i>
-											</button>
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
+					<img src="img/banner-1.jpg" alt="Image" />
+				</li>
+				<li>
+					<div class="tm-banner-inner">
+						<h1 class="tm-banner-title">Lorem <span class="tm-yellow-text">Ipsum</span> Dolor</h1>
+						<p class="tm-banner-subtitle">Wonderful Destinations</p>
 					</div>
-				</div>
-		      <img src="img/banner-2.jpg" alt="Image" />
-		    </li>
-		    <li>
-			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Proin <span class="tm-yellow-text">Gravida</span> Nibhvell</h1>
-					<p class="tm-banner-subtitle">Velit Auctor</p>
-					<div class="container">
-						<div class="row search-row">
-							<div class="col-md-12">
-								<div class="custom-search-input">
-									<div class="input-group col-md-12">
-										<input type="text" class="form-control input-lg" placeholder="Buscar" />
-										<span class="input-group-btn">
-											<button class="btn btn-lg" type="button">
-												<i class="glyphicon glyphicon-search"></i>
-											</button>
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
+					<img src="img/banner-2.jpg" alt="Image" />
+				</li>
+				<li>
+					<div class="tm-banner-inner">
+						<h1 class="tm-banner-title">Proin <span class="tm-yellow-text">Gravida</span> Nibhvell</h1>
+						<p class="tm-banner-subtitle">Velit Auctor</p>
 					</div>
-				</div>
-		      <img src="img/banner-3.jpg" alt="Image" />
-		    </li>
-		  </ul>
+					<img src="img/banner-3.jpg" alt="Image" />
+				</li>
+			</ul>
 		</div>
 	</section>
+	
+	<div class="container search-container">
+		<div class="row search-row">
+			<div class="col-md-12">
+				<div class="custom-search-input">
+					<div class="input-group col-md-12">
+						<input type="text" class="form-control input-lg" placeholder="Buscar" />
+						<span class="input-group-btn">
+							<button class="btn btn-lg" type="button">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- gray bg -->
 	<section class="container tm-home-section-1" id="more">
