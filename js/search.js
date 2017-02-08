@@ -63,13 +63,13 @@ var AutocompleteSearch = (function() {
 
 (function() {
 
-    // Close the dropdown menu if the user clicks outside of it
-    // window.onclick = function(event) {
-    //     var dropdown = document.getElementById("myDropdown")
-    //     if (dropdown.classList.contains('show')) {
-    //         dropdown.classList.remove('show');
-    //     }
-    // }
+    //Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+        var dropdown = document.getElementById("myDropdown")
+        if (dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+        }
+    }
 
     httpGetAsync("http://localhost:8012/project/Travel/api.php?action=get_all_countries", AutocompleteSearch.loadData);
 })();
