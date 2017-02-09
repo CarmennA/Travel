@@ -10,7 +10,8 @@ Holiday Template
 http://www.templatemo.com/tm-475-holiday
 -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="css/search_styles.css">
+  <link rel="stylesheet" type="text/css" href="css/search.css">
+  <link rel="stylesheet" type="text/css" href="css/autocomplete.css">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
@@ -35,8 +36,8 @@ http://www.templatemo.com/tm-475-holiday
   				</div>
 	  			<div class="col-lg-6 col-md-8 col-sm-9">
 	  				<div class="mobile-menu-icon">
-		              <i class="fa fa-bars"></i>
-		            </div>
+		        	<i class="fa fa-bars"></i>
+		        </div>
 	  				<nav class="tm-nav">
 						<ul>
 							<li><a href="index.html" class="active">Home</a></li>
@@ -45,12 +46,10 @@ http://www.templatemo.com/tm-475-holiday
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</nav>
-	  			</div>
-  			</div>
+	  		</div>
   		</div>
   	</div>
-
-	<textarea id="test"></textarea>
+  </div>
 
 	<!-- Banner -->
 	<section class="tm-banner">
@@ -86,9 +85,9 @@ http://www.templatemo.com/tm-475-holiday
 			<div class="col-md-12">
 				<div class="custom-search-input">
 					<div class="input-group col-md-12">
-						<input type="text" class="form-control input-lg" placeholder="Buscar" />
+						<input id="searchField" type="text" class="form-control input-lg" placeholder="Enter country name" onkeyup="AutocompleteSearch.updateList(this.value);" />
 						<span class="input-group-btn">
-							<button class="btn btn-lg" type="button">
+							<button class="btn btn-lg" type="button" onclick="AutocompleteSearch.search();">
 								<i class="glyphicon glyphicon-search"></i>
 							</button>
 						</span>
@@ -96,6 +95,10 @@ http://www.templatemo.com/tm-475-holiday
 				</div>
 			</div>
 		</div>
+		<div class="dropdown">
+  		<div id="myDropdown" class="dropdown-content">
+		</div>
+	</div>
 	</div>
 
 	<!-- gray bg -->
