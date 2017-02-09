@@ -1,85 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Popular Destinations</title>
-	<style>
-	.error {color: #FF0000;}
-	.table-electives {width: 30%;}
-	.table-electives-th {text-align: left;}
-	</style>
+  <title>Travel</title>
+  
+  
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/search.css">
+  <link rel="stylesheet" type="text/css" href="css/autocomplete.css">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="css/flexslider.css" rel="stylesheet">
+  <link href="css/templatemo-style.css" rel="stylesheet">
 
-</head>
+  </head>
+  <body class="tm-gray-bg">
+  	<div class="tm-header">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-lg-6 col-md-4 col-sm-3 tm-site-name-container">
+  					<a href="#" class="tm-site-name">Holiday</a>
+  				</div>
+	  			<div class="col-lg-6 col-md-8 col-sm-9">
+	  				<div class="mobile-menu-icon">
+		        	<i class="fa fa-bars"></i>
+		        </div>
+	  				<nav class="tm-nav">
+						<ul>
+							<li><a href="index.php">Home</a></li>
+							<li><a href="popular.php" class="active">Popular</a></li>
+							<li><a href="tours.html">Our Tours</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+	  		</div>
+  		</div>
+  	</div>
 
-<body>
+		<section class="tm-banner">
+			<div class="flexslider flexslider-banner">
+				<ul class="slides">
+					<li>
+						<div class="tm-banner-inner">
+							<h1 class="tm-banner-title">Find <span class="tm-yellow-text">The Best</span> Place</h1>
+							<p class="tm-banner-subtitle">For Your Holidays</p>
+						</div>
+						<img src="img/banner-1.jpg" alt="Image" />
+					</li>
+					<li>
+						<div class="tm-banner-inner">
+							<h1 class="tm-banner-title">Lorem <span class="tm-yellow-text">Ipsum</span> Dolor</h1>
+							<p class="tm-banner-subtitle">Wonderful Destinations</p>
+						</div>
+						<img src="img/banner-2.jpg" alt="Image" />
+					</li>
+					<li>
+						<div class="tm-banner-inner">
+							<h1 class="tm-banner-title">Proin <span class="tm-yellow-text">Gravida</span> Nibhvell</h1>
+							<p class="tm-banner-subtitle">Velit Auctor</p>
+						</div>
+						<img src="img/banner-3.jpg" alt="Image" />
+					</li>
+				</ul>
+			</div>
+		</section>
 
-	<?php
-	include 'connectionToDatabase.php';
-	include 'restConsumer.php';
+		<div class="container search-container">
+			<div class="row search-row">
+				<div class="col-md-12">
+					<div class="custom-search-input">
+						<div class="input-group col-md-12">
+							<input id="searchField" type="text" class="form-control input-lg" placeholder="Enter country name" onkeyup="AutocompleteSearch.updateList(this.value);" />
+							<span class="input-group-btn">
+								<button class="btn btn-lg" type="button" onclick="AutocompleteSearch.search();">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dropdown">
+				<div id="myDropdown" class="dropdown-content">
+				</div>
+			</div>
+		</div>
 
-	$country = "";
+		<?php
 
-	if ($_SERVER["REQUEST_METHOD"] == "GET") {
+		include 'connectionToDatabase.php';
 
-		$connection = CreateConnectionToDatabase();
-		if (array_key_exists('country', $_GET))
-		{
-			$country = $_GET['country'];
+		$conn = CreateConnectionToDatabase();
+		$sql = 'SELECT c.Name, c.Code, s.Searches, s.Order FROM countries c JOIN searches s ON s.CountryCode = c.Code ORDER BY s.Searches, s.ORDER DESC LIMIT 10';
+		$results = $conn->query($sql);
+		$topCountries = [];
+		while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
+				array_push($topCountries, $row);
 		}
 
-		if (empty($country))
-		{
-			echo "<div>Error.</div>";
-		}
-		else{
-			$sql = "SELECT `Code` FROM `travel_db`.`countries` WHERE Name = {$country}";
-			$query = $connection->query($sql) or die("failed!");
+		?>
 
+		<section class="container tm-home-section-1" id="more">
+			<div class="section-margin-top">
+				<div class="row">				
+					<div class="tm-section-header">
+						<div class="col-lg-3 col-md-3 col-sm-3"><hr></div>
+						<div class="col-lg-6 col-md-6 col-sm-6"><h2 class="tm-section-title">Most popular</h2></div>
+						<div class="col-lg-3 col-md-3 col-sm-3"><hr></div>	
+					</div>
+				</div>
+				<div class="row">
+					<?php foreach($topCountries as $country): ?>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="tm-tours-box-1">
+								<img src="img/tours-03.jpg" alt="image" class="img-responsive">
+								<div class="tm-tours-box-1-info">
+									<div class="tm-tours-box-1-info-left">
+										<p class="text-uppercase margin-bottom-20"><?php echo $country['Name']; ?></p>
+									</div>
+									<div class="tm-tours-box-1-info-right">
+										<button class="gray-text tours-1-description" onclick="viewDetails('<?php echo $country['Code']; ?>');">View</button>	
+									</div>							
+								</div>
+								<div class="tm-tours-box-1-link">
+									<div class="tm-tours-box-1-link-left">
+										Searches:
+									</div>
+									<a href="#" class="tm-tours-box-1-link-right">
+										<?php echo $country['Searches']; ?>								
+									</a>							
+								</div>
+							</div>					
+						</div>
+					<?php endforeach; ?>
+				</div>		
+			</div>
+		</section>	
 
-			if ($row = $query->fetch(PDO::FETCH_ASSOC))
-			{
-				$countryCode = $row['Code'];
+		<footer class="tm-black-bg">
+			<div class="container">
+				<div class="row">
+					<p class="tm-copyright-text">Copyright &copy; 2017</p>
+				</div>
+			</div>
+		</footer>
 
-				$result = CallAPI("GET", "https://restcountries.eu/rest/v1/alpha/{$countryCode}");
-			  echo $result["capital"];
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/moment.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+		<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
 
-				// $result = "<div>List with the elective disciplines with lecturer {$teacher} </div>";
-				// $result .= "<table class='table-electives'><tr>";
-				// $result .= "<th class='table-electives-th'>Title</th><th>Description</th></tr>";
-				// echo $result;
-				// do
-				// {
-				// 	$subjectName = $row['title'];
-				// 	$description = $row['description'];
-				//
-				// 	echo "<tr>";
-				// 		echo "<td>$subjectName</td>";
-				// 		echo "<td>$description</td>";
-				// 	echo "</tr>";
-				// }while($row= $query->fetch(PDO::FETCH_ASSOC));
-				// echo "</table>";
+		<script type="text/javascript" src="js/templatemo-script.js"></script>
 
+		<script type="text/javascript" src="js/http-helper.js"></script>
+		<script type="text/javascript" src="js/search.js"></script>
+
+		<script>
+			function viewDetails(selectedCode) {
+					location.href = "http://localhost:7080/PROJECT_FOLDER/Travel/details.php?country=" + selectedCode;
 			}
-			else
-			{
-				echo "<div>Error. Doesn't exist such Country!</div>";
-			}
 
-			$connection = null;
-		}
-	}
-
-	function modify_input($input) {
-		$input = trim($input);
-		$input = stripslashes($input);
-		$input = htmlspecialchars($input);
-
-		return $input;
-	}
-	?>
-
+			$(window).load(function() {
+					$('.flexslider').flexslider({
+						controlNav: false
+					});
+			});
+		</script>
 </body>
 </html>
