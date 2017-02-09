@@ -21,7 +21,7 @@ var AutocompleteSearch = (function() {
             return;
         }
 
-        var filtered = countries.filter(function(item) { return item.name.toLowerCase().includes(text); });
+        var filtered = countries.filter(function(item) { return item.name.toLowerCase().includes(text.toLowerCase()); });
         var dropdown = document.getElementById("myDropdown");
         dropdown.innerHTML = "";
 
@@ -48,7 +48,7 @@ var AutocompleteSearch = (function() {
     }
 
     function search() {
-        location.href = "http://localhost:8012/project/Travel/popular.php?country=" + selectedCode;
+        location.href = "http://localhost:7080/project/Travel/popular.php?country=" + selectedCode;
     }
 
     return {
@@ -71,5 +71,5 @@ var AutocompleteSearch = (function() {
         }
     }
 
-    httpGetAsync("http://localhost:8012/project/Travel/api.php?action=get_all_countries", AutocompleteSearch.loadData);
+    httpGetAsync("http://localhost:7080/project/Travel/api.php?action=get_all_countries", AutocompleteSearch.loadData);
 })();
