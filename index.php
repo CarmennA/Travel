@@ -49,7 +49,7 @@ http://www.templatemo.com/tm-475-holiday
   			</div>
   		</div>
   	</div>
-	
+
 	<textarea id="test"></textarea>
 
 	<!-- Banner -->
@@ -80,7 +80,7 @@ http://www.templatemo.com/tm-475-holiday
 			</ul>
 		</div>
 	</section>
-	
+
 	<div class="container search-container">
 		<div class="row search-row">
 			<div class="col-md-12">
@@ -224,10 +224,10 @@ http://www.templatemo.com/tm-475-holiday
 	<script src="js/jquery.fitvid.js"></script>
 -->
    	<script type="text/javascript" src="js/templatemo-script.js"></script>      		<!-- Templatemo Script -->
-	
+
 	<script type="text/javascript" src="js/http-helper.js"></script>
 	<script type="text/javascript" src="js/search.js"></script>
-	
+
 	<script>
 		// HTML document is loaded. DOM is ready.
 		$(function() {
