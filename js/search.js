@@ -48,7 +48,7 @@ var AutocompleteSearch = (function() {
     }
 
     function search() {
-        location.href = "http://localhost:7080/project/Travel/popular.php?country=" + selectedCode;
+        location.href = "http://localhost:7080/PROJECT_FOLDER/Travel/details.php?country=" + selectedCode;
     }
 
     return {

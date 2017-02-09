@@ -138,6 +138,7 @@ body { overflow-x: hidden; }
 .tm-home-section-1 {
 	position: relative;
 	top: -50px;
+	z-index: -1;
 }
 .form-control {	border-radius: 0; }
 .form-control:focus {

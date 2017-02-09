@@ -103,8 +103,6 @@ http://www.templatemo.com/tm-475-holiday
 
 	<!-- gray bg -->
 	<section class="container tm-home-section-1" id="more">
-
-
 		<div class="section-margin-top">
 			<div class="row">
 				<div class="tm-section-header">
