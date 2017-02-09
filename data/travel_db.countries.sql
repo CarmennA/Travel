@@ -1,0 +1,6 @@
+﻿CREATE TABLE `countries` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(40) NOT NULL,
+  `Code` char(2) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

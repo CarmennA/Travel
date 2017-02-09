@@ -387,10 +387,13 @@ hr { border-top: 1px solid #111010; }
 	padding: 40px;
 	overflow: hidden;
 }
-.tm-tours-box-1-info-left,
+.tm-tours-box-1-info-left {
+	float: left;
+	width: 80%;
+}
 .tm-tours-box-1-info-right {
 	float: left;
-	width: 50%;
+	width: 20%;
 }
 .tm-tours-box-1-info-left {
 	border-right: 1px solid #B1B1B1;

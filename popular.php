@@ -94,7 +94,7 @@
 		include 'connectionToDatabase.php';
 
 		$conn = CreateConnectionToDatabase();
-		$sql = 'SELECT c.Name, c.Code, s.Searches, s.Order FROM countries c JOIN searches s ON s.CountryCode = c.Code ORDER BY s.Searches, s.ORDER DESC LIMIT 10';
+		$sql = 'SELECT c.Name, c.Code, s.Searches, s.Order FROM countries c JOIN searches s ON s.CountryCode = c.Code ORDER BY s.Searches DESC, s.ORDER ASC LIMIT 10';
 		$results = $conn->query($sql);
 		$topCountries = [];
 		while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
