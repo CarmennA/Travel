@@ -31,17 +31,17 @@ http://www.templatemo.com/tm-475-holiday
   	<div class="tm-header">
   		<div class="container">
   			<div class="row">
-  				<div class="col-lg-6 col-md-4 col-sm-3 tm-site-name-container">
+  				<div class="col-lg-4 col-md-4 col-sm-3 tm-site-name-container">
   					<a href="#" class="tm-site-name">Holiday</a>
   				</div>
-	  			<div class="col-lg-6 col-md-8 col-sm-9">
+	  			<div class="col-lg-8 col-md-8 col-sm-9">
 	  				<div class="mobile-menu-icon">
 		        	<i class="fa fa-bars"></i>
 		        </div>
 	  				<nav class="tm-nav">
 						<ul>
-							<li><a href="index.html" class="active">Home</a></li>
-							<li><a href="popular.php?country='Anguilla'">Popular</a></li>
+							<li><a href="index.php" class="active">Home</a></li>
+							<li><a href="popular.php?country='Anguilla'">Most Popular</a></li>
 							<li><a href="tours.html">Our Tours</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
@@ -222,11 +222,7 @@ http://www.templatemo.com/tm-475-holiday
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>					<!-- bootstrap js -->
 	<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>	<!-- bootstrap date time picker js, http://eonasdan.github.io/bootstrap-datetimepicker/ -->
 	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-<!--
-	<script src="js/froogaloop.js"></script>
-	<script src="js/jquery.fitvid.js"></script>
--->
-   	<script type="text/javascript" src="js/templatemo-script.js"></script>      		<!-- Templatemo Script -->
+  <script type="text/javascript" src="js/templatemo-script.js"></script>
 
 	<script type="text/javascript" src="js/http-helper.js"></script>
 	<script type="text/javascript" src="js/search.js"></script>

@@ -71,5 +71,5 @@ var AutocompleteSearch = (function() {
         }
     }
 
-    httpGetAsync("http://localhost:7080/project/Travel/api.php?action=get_all_countries", AutocompleteSearch.loadData);
+    httpGetAsync("http://localhost:7080/PROJECT_FOLDER/Travel/api.php?action=get_all_countries", AutocompleteSearch.loadData);
 })();

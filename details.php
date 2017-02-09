@@ -8,12 +8,14 @@
   <title>Most Popular Destinations</title>
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/search.css">
+  <link rel="stylesheet" type="text/css" href="css/autocomplete.css">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
   <link href="css/flexslider.css" rel="stylesheet">
   <link href="css/templatemo-style.css" rel="stylesheet">
-</head>
+ </head>
 
 <body class="tm-gray-bg">
 
@@ -21,17 +23,17 @@
   	<div class="tm-header">
   		<div class="container">
   			<div class="row">
-  				<div class="col-lg-6 col-md-4 col-sm-3 tm-site-name-container">
+  				<div class="col-lg-4 col-md-4 col-sm-3 tm-site-name-container">
   					<a href="#" class="tm-site-name">Holiday</a>
   				</div>
-	  			<div class="col-lg-6 col-md-8 col-sm-9">
+	  			<div class="col-lg-8 col-md-8 col-sm-9">
 	  				<div class="mobile-menu-icon">
 		              <i class="fa fa-bars"></i>
 		            </div>
 	  				<nav class="tm-nav">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html" class="active">Popular</a></li>
+							<li><a href="index.php">Home</a></li>
+							<li><a href="popular.php?country='Anguilla'">Most Popular</a></li>
 							<li><a href="tours.html">Our Tours</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
@@ -41,41 +43,90 @@
   		</div>
   	</div>
 
+		<!-- Banner -->
+				<section class="tm-banner">
+					<!-- Flexslider -->
+					<div class="flexslider flexslider-banner">
+					  <ul class="slides">
+					    <li>
+						    <div class="tm-banner-inner">
+								<h1 class="tm-banner-title"><span class="tm-yellow-text">Tour</span> Packages</h1>
+								<p class="tm-banner-subtitle">For Your Vacations</p>
+							</div>
+					      <img src="img/banner-3.jpg" alt="Image" />
+					    </li>
+					    <li>
+						    <div class="tm-banner-inner">
+								<h1 class="tm-banner-title">Lorem <span class="tm-yellow-text">Ipsum</span> Dolor</h1>
+								<p class="tm-banner-subtitle">Wonderful Destinations</p>
+							</div>
+					      <img src="img/banner-2.jpg" alt="Image" />
+					    </li>
+					    <li>
+						    <div class="tm-banner-inner">
+								<h1 class="tm-banner-title">Proin <span class="tm-yellow-text">Gravida</span> Nibhvell</h1>
+								<p class="tm-banner-subtitle">Velit Auctor</p>
+							</div>
+					      <img src="img/banner-1.jpg" alt="Image" />
+					    </li>
+					  </ul>
+					</div>
+				</section>
 
-	<!-- Banner -->
-	<section class="tm-banner">
-		<!-- Flexslider -->
-		<div class="flexslider flexslider-banner">
-		  <ul class="slides">
-		    <li>
-			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title"><span class="tm-yellow-text">Tour</span> Packages</h1>
-					<p class="tm-banner-subtitle">For Your Vacations</p>
-					<a href="#more" class="tm-banner-link">Learn More</a>
+				<div class="container search-container">
+					<div class="row search-row">
+						<div class="col-md-12">
+							<div class="custom-search-input">
+								<div class="input-group col-md-12">
+									<input id="searchField" type="text" class="form-control input-lg" placeholder="Enter country name" onkeyup="AutocompleteSearch.updateList(this.value);" />
+									<span class="input-group-btn">
+										<button class="btn btn-lg" type="button" onclick="AutocompleteSearch.search();">
+											<i class="glyphicon glyphicon-search"></i>
+										</button>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown">
+			  		<div id="myDropdown" class="dropdown-content">
+						</div>
+					</div>
 				</div>
-		      <img src="img/banner-3.jpg" />
-		    </li>
-		    <li>
-			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Lorem <span class="tm-yellow-text">Ipsum</span> Dolor</h1>
-					<p class="tm-banner-subtitle">Wonderful Destinations</p>
-					<a href="#more" class="tm-banner-link">Learn More</a>
-				</div>
-		      <img src="img/banner-2.jpg" />
-		    </li>
-		    <li>
-			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Proin <span class="tm-yellow-text">Gravida</span> Nibhvell</h1>
-					<p class="tm-banner-subtitle">Velit Auctor</p>
-					<a href="#more" class="tm-banner-link">Learn More</a>
-				</div>
-		      <img src="img/banner-1.jpg" />
-		    </li>
-		  </ul>
-		</div>
-	</section>
 
-	<!-- gray bg -->
+	<?php
+	include 'restConsumer.php';
+
+	$country = "";
+	$errors = array();
+
+	if ($_SERVER["REQUEST_METHOD"] == "GET") {
+
+		if (array_key_exists('country', $_GET))
+		{
+			$country = $_GET['country'];
+		}
+
+		if (empty($country))
+		{
+			 array_push($errors, "Error occured. There is no country code passed.");
+			echo "<div class='missing-country'>Error occured. There is no country code passed.</div>";
+		}
+		else{
+
+				$result = CallAPI("GET", "https://restcountries.eu/rest/v1/alpha/{$country}");
+			  // echo $result["capital"];
+				var_dump($result);
+		}
+	}
+	// echo count($errors);
+	// $countErrors = count($errors);
+	// $b = ($countErrors == 0);
+	?>
+
+	<?php if(count($errors) == 0): ?>
+
+			<!-- gray bg -->
 	<section class="container tm-home-section-1" id="more">
 		<div class="row">
 			<!-- slider -->
@@ -142,9 +193,8 @@
 			  </ul>
 			</div>
 		</div>
-
-
 	</section>
+	<?php endif; ?>
 
 	<footer class="tm-black-bg">
 		<div class="container">
@@ -157,6 +207,9 @@
   	<script type="text/javascript" src="js/bootstrap.min.js"></script>					<!-- bootstrap js -->
   	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>			<!-- flexslider js -->
   	<script type="text/javascript" src="js/templatemo-script.js"></script>      		<!-- Templatemo Script -->
+		<script type="text/javascript" src="js/http-helper.js"></script>
+		<script type="text/javascript" src="js/search.js"></script>
+
 	<script>
 		$(function() {
 

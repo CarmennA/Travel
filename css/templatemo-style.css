@@ -903,3 +903,11 @@ hr { border-top: 1px solid #111010; }
 @media screen and (max-width: 400px) {
 	.tm-section-title {	font-size: 28px; }
 }
+
+/* Errors CSS */
+.missing-country{
+	margin: 100px;
+	text-align: center;
+	font-size: 25px;
+	color: red;
+}
