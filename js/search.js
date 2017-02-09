@@ -48,7 +48,7 @@ var AutocompleteSearch = (function() {
     }
 
     function search() {
-        location.href = "http://localhost:7080/project/Travel/popular.php?country=" + selectedCode;
+        location.href = "http://localhost:7080/PROJECT_FOLDER/Travel/popular.php?country=" + selectedCode;
     }
 
     return {
@@ -64,12 +64,12 @@ var AutocompleteSearch = (function() {
 (function() {
 
     //Close the dropdown menu if the user clicks outside of it
-    window.onclick = function(event) {
-        var dropdown = document.getElementById("myDropdown")
-        if (dropdown.classList.contains('show')) {
-            dropdown.classList.remove('show');
-        }
-    }
+    // window.onclick = function(event) {
+    //     var dropdown = document.getElementById("myDropdown")
+    //     if (dropdown.classList.contains('show')) {
+    //         dropdown.classList.remove('show');
+    //     }
+    // }
 
-    httpGetAsync("http://localhost:7080/project/Travel/api.php?action=get_all_countries", AutocompleteSearch.loadData);
+    httpGetAsync("http://localhost:7080/PROJECT_FOLDER/Travel/api.php?action=get_all_countries", AutocompleteSearch.loadData);
 })();
