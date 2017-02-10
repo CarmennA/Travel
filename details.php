@@ -12,87 +12,15 @@
   <link rel="stylesheet" type="text/css" href="css/autocomplete.css">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
   <link href="css/flexslider.css" rel="stylesheet">
   <link href="css/templatemo-style.css" rel="stylesheet">
  </head>
 
 <body class="tm-gray-bg">
 
-	<!-- Header -->
-  	<div class="tm-header">
-  		<div class="container">
-  			<div class="row">
-  				<div class="col-lg-4 col-md-4 col-sm-3 tm-site-name-container">
-  					<a href="#" class="tm-site-name">Holiday</a>
-  				</div>
-	  			<div class="col-lg-8 col-md-8 col-sm-9">
-	  				<div class="mobile-menu-icon">
-		              <i class="fa fa-bars"></i>
-		            </div>
-	  				<nav class="tm-nav">
-						<ul>
-							<li><a href="index.php">Home</a></li>
-							<li><a href="popular.php?country='Anguilla'">Most Popular</a></li>
-							<li><a href="login.php">Profile</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</nav>
-	  			</div>
-  			</div>
-  		</div>
-  	</div>
-
-		<!-- Banner -->
-				<section class="tm-banner">
-					<!-- Flexslider -->
-					<div class="flexslider flexslider-banner">
-					  <ul class="slides">
-					    <li>
-						    <div class="tm-banner-inner">
-								<h1 class="tm-banner-title"><span class="tm-yellow-text">Tour</span> Packages</h1>
-								<p class="tm-banner-subtitle">For Your Vacations</p>
-							</div>
-					      <img src="img/banner-3.jpg" alt="Image" />
-					    </li>
-					    <li>
-						    <div class="tm-banner-inner">
-								<h1 class="tm-banner-title">Lorem <span class="tm-yellow-text">Ipsum</span> Dolor</h1>
-								<p class="tm-banner-subtitle">Wonderful Destinations</p>
-							</div>
-					      <img src="img/banner-2.jpg" alt="Image" />
-					    </li>
-					    <li>
-						    <div class="tm-banner-inner">
-								<h1 class="tm-banner-title">Proin <span class="tm-yellow-text">Gravida</span> Nibhvell</h1>
-								<p class="tm-banner-subtitle">Velit Auctor</p>
-							</div>
-					      <img src="img/banner-1.jpg" alt="Image" />
-					    </li>
-					  </ul>
-					</div>
-				</section>
-
-				<div class="container search-container">
-					<div class="row search-row">
-						<div class="col-md-12">
-							<div class="custom-search-input">
-								<div class="input-group col-md-12">
-									<input id="searchField" type="text" class="form-control input-lg" placeholder="Enter country name" onkeyup="AutocompleteSearch.updateList(this.value);" />
-									<span class="input-group-btn">
-										<button class="btn btn-lg" type="button" onclick="AutocompleteSearch.search();">
-											<i class="glyphicon glyphicon-search"></i>
-										</button>
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="dropdown">
-			  		<div id="myDropdown" class="dropdown-content">
-						</div>
-					</div>
-				</div>
+	<?php
+		include('header.php');
+	?>
 
 	<?php
 	include 'restConsumer.php';
@@ -117,7 +45,7 @@
 
 				$result = CallAPI("GET", "https://restcountries.eu/rest/v1/alpha/{$country}");
 			  // echo $result["capital"];
-				var_dump($result);
+				// var_dump($result);
 
 				$conn = CreateConnectionToDatabase();
 				$sql = "CALL update_counters(:code)";
@@ -140,7 +68,7 @@
 	<?php if(count($errors) == 0): ?>
 
 			<!-- gray bg -->
-	<section class="container tm-home-section-1" id="more">
+	<section class="container tm-home-section-1 details-zindex" id="more">
 		<div class="row">
 			<!-- slider -->
 			<div class="flexslider flexslider-about effect2">
@@ -224,22 +152,7 @@
 		<script type="text/javascript" src="js/search.js"></script>
 
 	<script>
-		$(function() {
 
-			// https://css-tricks.com/snippets/jquery/smooth-scrolling/
-		  	$('a[href*=#]:not([href=#])').click(function() {
-			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			      var target = $(this.hash);
-			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			      if (target.length) {
-			        $('html,body').animate({
-			          scrollTop: target.offset().top
-			        }, 1000);
-			        return false;
-			      }
-			    }
-		  	});
-		});
 		$(window).load(function(){
 			// Flexsliders
 		  	$('.flexslider.flexslider-banner').flexslider({

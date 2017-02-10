@@ -778,9 +778,6 @@ hr { border-top: 1px solid #111010; }
 
 @media screen and (max-width: 767px) {
 
-	/* http://www.impressivewebs.com/animate-display-block-none/
-	 * Comment by Jon Christensen
-	 */
 	.tm-nav.show {
 		opacity: 1;
 		height: auto;
@@ -914,4 +911,10 @@ hr { border-top: 1px solid #111010; }
 	text-align: center;
 	font-size: 25px;
 	color: red;
+}
+
+/* Details more Css */
+.details-zindex{
+	z-index: 0 !important;
+	margin-top: 100px;
 }
