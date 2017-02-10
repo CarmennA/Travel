@@ -16,7 +16,7 @@
   <link href="css/travel-style.css" rel="stylesheet">
 
   </head>
-  <body class="tm-gray-bg">
+  <body class="travel-gray-bg">
 		<?php
       include('header.php');
     ?>
@@ -35,33 +35,33 @@
 
 		?>
 
-		<section class="container tm-home-section-1" id="more">
+		<section class="container travel-home-section-1 popular-zindex" id="more">
 			<div class="section-margin-top">
 				<div class="row">
-					<div class="tm-section-header">
+					<div class="travel-section-header">
 						<div class="col-lg-3 col-md-3 col-sm-3"><hr></div>
-						<div class="col-lg-6 col-md-6 col-sm-6"><h2 class="tm-section-title">Most popular</h2></div>
+						<div class="col-lg-6 col-md-6 col-sm-6"><h2 class="travel-section-title">Most popular</h2></div>
 						<div class="col-lg-3 col-md-3 col-sm-3"><hr></div>
 					</div>
 				</div>
 				<div class="row">
 					<?php foreach($topCountries as $country): ?>
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-							<div class="tm-tours-box-1">
+							<div class="travel-tours-box-1">
 								<img src="img/tours-03.jpg" alt="image" class="img-responsive">
-								<div class="tm-tours-box-1-info">
-									<div class="tm-tours-box-1-info-left">
+								<div class="travel-tours-box-1-info">
+									<div class="travel-tours-box-1-info-left">
 										<p class="text-uppercase margin-bottom-20"><?php echo $country['Name']; ?></p>
 									</div>
-									<div class="tm-tours-box-1-info-right">
+									<div class="travel-tours-box-1-info-right">
 										<button class="gray-text tours-1-description" onclick="viewDetails('<?php echo $country['Code']; ?>');">View</button>
 									</div>
 								</div>
-								<div class="tm-tours-box-1-link">
-									<div class="tm-tours-box-1-link-left">
+								<div class="travel-tours-box-1-link">
+									<div class="travel-tours-box-1-link-left">
 										Searches:
 									</div>
-									<a href="#" class="tm-tours-box-1-link-right">
+									<a href="#" class="travel-tours-box-1-link-right">
 										<?php echo $country['Searches']; ?>
 									</a>
 								</div>
@@ -72,13 +72,9 @@
 			</div>
 		</section>
 
-		<footer class="tm-black-bg">
-			<div class="container">
-				<div class="row">
-					<p class="tm-copyright-text">Copyright &copy; 2017</p>
-				</div>
-			</div>
-		</footer>
+		<?php
+	    include('footer.php');
+	   ?>
 
 		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>

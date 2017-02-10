@@ -20,17 +20,17 @@
 ?>
 
 <!-- Header -->
-<div class="tm-header">
+<div class="travel-header">
 	<div class="container">
   		<div class="row">
-  			<div class="col-lg-6 col-md-4 col-sm-3 tm-site-name-container">
-  				<a href="#" class="tm-site-name">Holiday</a>
+  			<div class="col-lg-6 col-md-4 col-sm-3 travel-site-name-container">
+  				<a href="#" class="travel-site-name">Holiday</a>
   			</div>
   			<div class="col-lg-6 col-md-8 col-sm-9">
   				<div class="mobile-menu-icon">
 					<i class="fa fa-bars"></i>
 				</div>
-  				<nav class="tm-nav">
+  				<nav class="travel-nav">
 					<ul>
 						<li><a href="index.php" <?php set_active('index.php') ?>>Home</a></li>
 						<li><a href="popular.php" <?php set_active('popular.php') ?>>Most Popular</a></li>
@@ -43,27 +43,27 @@
  </div>
 
 <!-- Slider -->
-<section class="tm-banner">
+<section class="travel-banner">
 	<div class="flexslider flexslider-banner">
 		<ul class="slides">
 			<li>
-				<div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Find <span class="tm-yellow-text">The Best</span> Place</h1>
-					<p class="tm-banner-subtitle">For Your Holidays</p>
+				<div class="travel-banner-inner">
+					<h1 class="travel-banner-title">Find <span class="travel-yellow-text">The Best</span> Place</h1>
+					<p class="travel-banner-subtitle">For Your Holidays</p>
 				</div>
 				<img src="img/banner-1.jpg" alt="Image" />
 			</li>
 			<li>
-				<div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Lorem <span class="tm-yellow-text">Ipsum</span> Dolor</h1>
-					<p class="tm-banner-subtitle">Wonderful Destinations</p>
+				<div class="travel-banner-inner">
+					<h1 class="travel-banner-title">Lorem <span class="travel-yellow-text">Ipsum</span> Dolor</h1>
+					<p class="travel-banner-subtitle">Wonderful Destinations</p>
 				</div>
 				<img src="img/banner-2.jpg" alt="Image" />
 			</li>
 			<li>
-				<div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Proin <span class="tm-yellow-text">Gravida</span> Nibhvell</h1>
-					<p class="tm-banner-subtitle">Velit Auctor</p>
+				<div class="travel-banner-inner">
+					<h1 class="travel-banner-title">Proin <span class="travel-yellow-text">Gravida</span> Nibhvell</h1>
+					<p class="travel-banner-subtitle">Velit Auctor</p>
 				</div>
 				<img src="img/banner-3.jpg" alt="Image" />
 			</li>

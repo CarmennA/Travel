@@ -17,7 +17,7 @@
 
   </head>
 
-  <body class="tm-gray-bg">
+  <body class="travel-gray-bg">
     <?php
       include('header.php');
     ?>
@@ -68,7 +68,7 @@
 			if (strlen($username) > 50) {
 				array_push($errors, 'Username must be no more than 50 symbols.');
 			}
-			
+
 			$id = login($username, $password);
 			if ($id == -1) {
 				array_push($errors, "Username already used.");
@@ -87,7 +87,7 @@
 				$cookie_name = "user";
 				$cookie_value = $username . '_' . $id;
 				setcookie($cookie_name, $cookie_value, time() + (86400), "/"); // 86400 = 1 day
-				
+
 				//header('Location:index.php');
 			}
 		}
@@ -105,13 +105,9 @@
     	<input style="display: block;" type="submit" name="submitType" value="Login" onclick="encryptPass();"/>
 	</form>
 
-	<footer class="tm-black-bg">
-		<div class="container">
-			<div class="row">
-				<p class="tm-copyright-text">Copyright &copy; 2017</p>
-			</div>
-		</div>
-	</footer>
+  <?php
+    include('footer.php');
+   ?>
 
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>

@@ -16,7 +16,7 @@
   <link href="css/travel-style.css" rel="stylesheet">
 
   </head>
-  <body class="tm-gray-bg">
+  <body class="travel-gray-bg">
     <?php
       include('header.php');
     ?>
@@ -113,13 +113,9 @@
     	<input style="display: block;" type="submit" name="submitType" value="Register" onclick="encryptPass();"/>
 	</form>
 
-	<footer class="tm-black-bg">
-		<div class="container">
-			<div class="row">
-				<p class="tm-copyright-text">Copyright &copy; 2017</p>
-			</div>
-		</div>
-	</footer>
+  <?php
+    include('footer.php');
+   ?>
 
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
