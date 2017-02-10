@@ -7,7 +7,7 @@
   <title>Travel</title>
   
   
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/search.css">
   <link rel="stylesheet" type="text/css" href="css/autocomplete.css">
   <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -32,7 +32,7 @@
 						<ul>
 							<li><a href="index.php">Home</a></li>
 							<li><a href="popular.php" class="active">Popular</a></li>
-							<li><a href="tours.html">Our Tours</a></li>
+							<li><a href="login.php">Profile</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</nav>
