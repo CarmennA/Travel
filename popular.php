@@ -13,7 +13,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/flexslider.css" rel="stylesheet">
-  <link href="css/templatemo-style.css" rel="stylesheet">
+  <link href="css/travel-style.css" rel="stylesheet">
 
   </head>
   <body class="tm-gray-bg">
@@ -84,7 +84,7 @@
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
 
-		<script type="text/javascript" src="js/templatemo-script.js"></script>
+		<script type="text/javascript" src="js/travel-script.js"></script>
 
 		<script type="text/javascript" src="js/http-helper.js"></script>
 		<script type="text/javascript" src="js/search.js"></script>

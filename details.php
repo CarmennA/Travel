@@ -13,7 +13,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/flexslider.css" rel="stylesheet">
-  <link href="css/templatemo-style.css" rel="stylesheet">
+  <link href="css/travel-style.css" rel="stylesheet">
  </head>
 
 <body class="tm-gray-bg">
@@ -78,7 +78,7 @@
 			      <div class="flex-caption">
 			      	<h2 class="slider-title">Welcome To Holiday</h2>
 			      	<h3 class="slider-subtitle">Gravida nibh vel velit auctor aliquet enean sollicitudin lorem quis auctor</h3>
-			      	<p class="slider-description">Holiday is free Bootstrap v3.3.5 responsive template for tour and travel websites. You can download and use this layout for any purpose. You do not need to provide a credit link to us. If you have any question, feel free to <a href="http://www.facebook.com/templatemo" target="_parent">contact us</a>. <br><br>
+			      	<p class="slider-description">Holiday is free Bootstrap v3.3.5 responsive template for tour and travel websites. You can download and use this layout for any purpose. You do not need to provide a credit link to us. If you have any question, feel free to <a href="http://www.facebook.com/travel" target="_parent">contact us</a>. <br><br>
                     Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum.</p>
 			      	<div class="slider-social">
 			      		<a href="#" class="tm-social-icon"><i class="fa fa-twitter"></i></a>
@@ -147,7 +147,7 @@
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      		<!-- jQuery -->
   	<script type="text/javascript" src="js/bootstrap.min.js"></script>					<!-- bootstrap js -->
   	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>			<!-- flexslider js -->
-  	<script type="text/javascript" src="js/templatemo-script.js"></script>      		<!-- Templatemo Script -->
+  	<script type="text/javascript" src="js/travel-script.js"></script>      		<!-- travel Script -->
 		<script type="text/javascript" src="js/http-helper.js"></script>
 		<script type="text/javascript" src="js/search.js"></script>
 
