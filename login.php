@@ -105,21 +105,21 @@
 
 		function login($name, $pass) {
 			$conn = CreateConnectionToDatabase();
-			$sql = "SELECT NULL FROM users WHERE Username = :username AND Password = :password";
+			$sql = "SELECT Id FROM users WHERE Username = :username AND Password = :password";
 			$query = $conn->prepare($sql);
 			$query->bindParam(':username', $name);
 			$query->bindParam(':password', $pass);
 			try {
 				$query->execute();
 				if ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-					return true;
+					return $row['Id'];
 				}
 			} catch (PDOException $e) {
 				$conn = null;
 				die('Query failed: ' . $e->getMessage());
 			}
 			$conn = null;
-			return false;
+			return -1;
 		}
 
 		$errors = [];
@@ -136,8 +136,9 @@
 			if (strlen($username) > 50) {
 				array_push($errors, 'Username must be no more than 50 symbols.');
 			}
-
-			if (!login($username, $password)) {
+			
+			$id = login($username, $password);
+			if ($id == -1) {
 				array_push($errors, "Username already used.");
 			}
 			
@@ -148,8 +149,14 @@
 				}
 				echo '</ul>';
 			} else {
+
+				echo $id;
+
+				$cookie_name = "user";
+				$cookie_value = $username . '_' . $id;
+				setcookie($cookie_name, $cookie_value, time() + (86400), "/"); // 86400 = 1 day
 				
-				header('Location:index.php');
+				//header('Location:index.php');
 			}
 		}
 		
