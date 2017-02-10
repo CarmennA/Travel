@@ -96,6 +96,7 @@
 
 	<?php
 	include 'restConsumer.php';
+	include 'connectionToDatabase.php';
 
 	$country = "";
 	$errors = array();
@@ -117,6 +118,32 @@
 				$result = CallAPI("GET", "https://restcountries.eu/rest/v1/alpha/{$country}");
 			  // echo $result["capital"];
 				var_dump($result);
+
+				$conn = CreateConnectionToDatabase();
+				$sql = "UPDATE s
+						SET s.Searches = s.Searches + 1, s.Order = (
+							CASE
+									WHEN 
+										EXISTS(SELECT NULL FROM searches innerS WHERE innerS.Searches = s.Searches + 1)
+										THEN 
+											(SELECT innerS.Order + 1 
+											FROM searches innerS 
+											WHERE innerS.Searches = s.Searches + 1 
+											ORDER BY innerS.Order DESC 
+											LIMIT 1)
+									ELSE 1
+							END)
+						FROM searches s
+						WHERE s.CountryCode = :code";
+				$query = $conn->prepare($sql);
+				$query->bindParam(':code', $country);
+				try {
+					$query->execute();
+				} catch (PDOException $e) {
+					$conn = null;
+					die('Query failed: ' . $e->getMessage());
+				}
+				$conn = null;
 		}
 	}
 	// echo count($errors);
