@@ -120,21 +120,7 @@
 				var_dump($result);
 
 				$conn = CreateConnectionToDatabase();
-				$sql = "UPDATE s
-						SET s.Searches = s.Searches + 1, s.Order = (
-							CASE
-									WHEN 
-										EXISTS(SELECT NULL FROM searches innerS WHERE innerS.Searches = s.Searches + 1)
-										THEN 
-											(SELECT innerS.Order + 1 
-											FROM searches innerS 
-											WHERE innerS.Searches = s.Searches + 1 
-											ORDER BY innerS.Order DESC 
-											LIMIT 1)
-									ELSE 1
-							END)
-						FROM searches s
-						WHERE s.CountryCode = :code";
+				$sql = "CALL update_counters(:code)";
 				$query = $conn->prepare($sql);
 				$query->bindParam(':code', $country);
 				try {
