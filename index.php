@@ -208,13 +208,9 @@ http://www.templatemo.com/tm-475-holiday
 			</div>
 		</div>
 	</section>
-	<footer class="tm-black-bg">
-		<div class="container">
-			<div class="row">
-				<p class="tm-copyright-text">Copyright &copy; 2017</p>
-			</div>
-		</div>
-	</footer>
+	<?php
+    include('footer.php');
+   ?>
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      		<!-- jQuery -->
   	<script type="text/javascript" src="js/moment.js"></script>							<!-- moment.js -->
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>					<!-- bootstrap js -->
