@@ -21,7 +21,7 @@
     ?>
 
 		<?php
-
+			include 'common.php';
 			include 'connectionToDatabase.php';
 
 			$cookie_val = $_COOKIE['user'];
@@ -83,7 +83,7 @@
 
 		?>
 
-	<section class="container travel-home-section-1" id="more">
+	<section class="container travel-home-section-1" style="margin-top: 100px; z-index: 0;" id="more">
 		<div class="section-margin-top">
 			<div class="row">
 				<div class="travel-section-header">
@@ -96,7 +96,7 @@
 				<?php foreach($results as $country): ?>
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<div class="travel-home-box-1 travel-home-box-1-2 travel-home-box-1-right">
-							<img src="img/index-02.jpg" alt="image" class="img-responsive">
+							<img src="<?php echo image_exists("img/Countries/" . $country['Code'] . ".jpg"); ?>" alt="image" class="img-responsive" style="height: 347px; width: 347px;">
 							<a href="details.php?country=<?php echo $country['Code']; ?>">
 								<div class="travel-red-gradient-bg travel-city-price-container">
 									<span><?php echo $country['Name']; ?></span>
@@ -182,7 +182,7 @@
 	</section>
 	<?php
     include('footer.php');
-   ?>
+  ?>
 
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      		<!-- jQuery -->
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>					<!-- bootstrap js -->

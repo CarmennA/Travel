@@ -18,11 +18,11 @@
   </head>
   <body class="travel-gray-bg popular-css">
 		<?php
-      include('header.php');
-    ?>
+      		include('header.php');
+    	?>
 
 		<?php
-    include 'common.php';
+    	include 'common.php';
 		include 'connectionToDatabase.php';
 
 		$conn = CreateConnectionToDatabase();
@@ -88,7 +88,7 @@
 
 		<script>
 			function viewDetails(selectedCode) {
-					location.href = "http://localhost:7080/PROJECT_FOLDER/Travel/details.php?country=" + selectedCode;
+				location.href = "details.php?country=" + selectedCode;
 			}
 
 			$(window).load(function() {
