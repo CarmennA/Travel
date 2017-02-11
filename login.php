@@ -88,7 +88,7 @@
 				$cookie_value = $username . '_' . $id;
 				setcookie($cookie_name, $cookie_value, time() + (86400), "/"); // 86400 = 1 day
 
-				//header('Location:index.php');
+				header('Location:profile.php');
 			}
 		}
 
