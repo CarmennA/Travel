@@ -1,4 +1,14 @@
 <?php
+	function set_profile_name() {
+		if(!isset($_COOKIE['user'])) {
+            echo 'Profile';
+        } else {
+            $cookie_val = $_COOKIE['user'];
+            $vals = explode('_', $cookie_val);
+			echo $vals[0];
+		}
+	}
+
 	function endsWith($haystack, $needle)
 	{
 	    $length = strlen($needle);
@@ -32,9 +42,9 @@
 				</div>
   				<nav class="travel-nav">
 					<ul>
-						<li><a href="index.php" <?php set_active('index.php') ?>>Home</a></li>
-						<li><a href="popular.php" <?php set_active('popular.php') ?>>Most Popular</a></li>
-						<li><a href="profile.php" <?php set_active('profile.php') ?>>Profile</a></li>
+						<li><a href="index.php" <?php set_active('index.php'); ?>>Home</a></li>
+						<li><a href="popular.php" <?php set_active('popular.php'); ?>>Most Popular</a></li>
+						<li><a href="profile.php" <?php set_active('profile.php'); ?>><?php set_profile_name(); ?></a></li>
 					</ul>
 				</nav>
 			</div>
