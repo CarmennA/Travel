@@ -24,25 +24,28 @@
 			include 'common.php';
 			include 'connectionToDatabase.php';
 
-			$cookie_val = $_COOKIE['user'];
-      $vals = explode('_', $cookie_val);
-
-			$conn = CreateConnectionToDatabase();
-			$sql = 'SELECT c.Name, c.Code FROM countries c
-							JOIN countries_filters cf ON cf.CountryCode = c.Code
-							JOIN users_filters uf ON uf.FilterId = cf.FilterId
-							WHERE uf.UserId = :userId
-							GROUP BY c.Name, c.Code
-							ORDER BY COUNT(*) DESC';
-			$query = $conn->prepare($sql);
-      $query->bindParam(':userId', $vals[1]);
-      $query->execute();
-
       $results = [];
-      while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-          array_push($results, $row);
+
+      if(isset($_COOKIE['user'])) {
+        $cookie_val = $_COOKIE['user'];
+        $vals = explode('_', $cookie_val);
+
+        $conn = CreateConnectionToDatabase();
+  			$sql = 'SELECT c.Name, c.Code FROM countries c
+  							JOIN countries_filters cf ON cf.CountryCode = c.Code
+  							JOIN users_filters uf ON uf.FilterId = cf.FilterId
+  							WHERE uf.UserId = :userId
+  							GROUP BY c.Name, c.Code
+  							ORDER BY COUNT(*) DESC';
+  			$query = $conn->prepare($sql);
+        $query->bindParam(':userId', $vals[1]);
+        $query->execute();
+
+        while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+            array_push($results, $row);
+        }
+        $conn = null;
       }
-      $conn = null;
 
 			$left = 3 - count($results);
 
@@ -59,17 +62,17 @@
 					$usedIds = $usedIds . ")";
 
 					$conn = CreateConnectionToDatabase();
-					$sql = "SELECT c.Name, c.Code 
-									FROM countries c 
+					$sql = "SELECT c.Name, c.Code
+									FROM countries c
 									JOIN searches s ON s.CountryCode = c.Code";
 
 					if ($left < 3) {
 							$sql = $sql . "
 									WHERE c.Code NOT IN " . $usedIds;
 					}
-									
+
 					$sql = $sql . "
-									ORDER BY s.Searches DESC, s.Order ASC 
+									ORDER BY s.Searches DESC, s.Order ASC
 									LIMIT :left";
 
 					$query = $conn->prepare($sql);
