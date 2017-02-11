@@ -32,6 +32,7 @@
 		while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
 				array_push($topCountries, $row);
 		}
+		$conn = null;
 
 		?>
 

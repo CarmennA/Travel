@@ -20,37 +20,92 @@
       include('header.php');
     ?>
 
+	<?php
+
+			include 'connectionToDatabase.php';
+
+			$cookie_val = $_COOKIE['user'];
+      $vals = explode('_', $cookie_val);
+
+			$conn = CreateConnectionToDatabase();
+			$sql = 'SELECT c.Name, c.Code FROM countries c
+							JOIN countries_filters cf ON cf.CountryCode = c.Code
+							JOIN users_filters uf ON uf.FilterId = cf.FilterId
+							WHERE uf.UserId = :userId
+							GROUP BY c.Name, c.Code
+							ORDER BY COUNT(*) DESC';
+			$query = $conn->prepare($sql);
+      $query->bindParam(':userId', $vals[1]);
+      $query->execute();
+
+      $results = [];
+      while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+          array_push($results, $row);
+      }
+      $conn = null;
+
+			$left = 3 - count($results);
+
+			if ($left > 0) {
+					$usedIds = "(";
+					$i = 0;
+					foreach ($results as $country) {
+							if ($i > 0) {
+									$usedIds = $usedIds . ", ";
+							}
+							$usedIds = $usedIds . "'" . $country['Code'] . "'";
+							$i++;
+					}
+					$usedIds = $usedIds . ")";
+
+					$conn = CreateConnectionToDatabase();
+					$sql = "SELECT c.Name, c.Code 
+									FROM countries c 
+									JOIN searches s ON s.CountryCode = c.Code";
+
+					if ($left < 3) {
+							$sql = $sql . "
+									WHERE c.Code NOT IN " . $usedIds;
+					}
+									
+					$sql = $sql . "
+									ORDER BY s.Searches DESC, s.Order ASC 
+									LIMIT :left";
+
+					$query = $conn->prepare($sql);
+					$query->bindParam(':left', $left, PDO::PARAM_INT);
+					$query->execute();
+					while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+							array_push($results, $row);
+					}
+					$conn = null;
+			}
+
+	?>
+
 	<!-- gray bg -->
 	<section class="container travel-home-section-1" id="more">
 		<div class="section-margin-top">
 			<div class="row">
 				<div class="travel-section-header">
 					<div class="col-lg-3 col-md-3 col-sm-3"><hr></div>
-					<div class="col-lg-6 col-md-6 col-sm-6"><h2 class="travel-section-title">Most Popular Countries</h2></div>
+					<div class="col-lg-6 col-md-6 col-sm-6"><h2 class="travel-section-title">Recommended locations</h2></div>
 					<div class="col-lg-3 col-md-3 col-sm-3"><hr></div>
 				</div>
 			</div>
       <div class="row">
-  			<div class="col-lg-4 col-md-4 col-sm-6">
-  				<div class="travel-home-box-1 travel-home-box-1-2 travel-home-box-1-center">
-  					<img src="img/index-01.jpg" alt="image" class="img-responsive">
-  					<a href="#">
-  						<div class="travel-green-gradient-bg travel-city-price-container">
-  							<span>New York</span>
-  						</div>
-  					</a>
+				<?php foreach($results as $country): ?>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="travel-home-box-1 travel-home-box-1-2 travel-home-box-1-right">
+							<img src="img/index-02.jpg" alt="image" class="img-responsive">
+							<a href="details.php?country=<?php echo $country['Code']; ?>">
+								<div class="travel-red-gradient-bg travel-city-price-container">
+									<span><?php echo $country['Name']; ?></span>
+								</div>
+							</a>
+						</div>
   				</div>
-  			</div>
-  			<div class="col-lg-4 col-md-4 col-sm-6">
-  				<div class="travel-home-box-1 travel-home-box-1-2 travel-home-box-1-right">
-  					<img src="img/index-02.jpg" alt="image" class="img-responsive">
-  					<a href="#">
-  						<div class="travel-red-gradient-bg travel-city-price-container">
-  							<span>Paris</span>
-  						</div>
-  					</a>
-  				</div>
-  			</div>
+				<?php endforeach; ?>
   		</div>
 		</div>
 	</section>

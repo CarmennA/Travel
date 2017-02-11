@@ -65,15 +65,15 @@
 			</li>
 			<li>
 				<div class="travel-banner-inner">
-					<h1 class="travel-banner-title">Lorem <span class="travel-yellow-text">Ipsum</span> Dolor</h1>
-					<p class="travel-banner-subtitle">Wonderful Destinations</p>
+					<h1 class="travel-banner-title">Travel <span class="travel-yellow-text">to exciting</span> locations</h1>
+					<p class="travel-banner-subtitle">all around the world</p>
 				</div>
 				<img src="img/banner-2.jpg" alt="Image" />
 			</li>
 			<li>
 				<div class="travel-banner-inner">
-					<h1 class="travel-banner-title">Proin <span class="travel-yellow-text">Gravida</span> Nibhvell</h1>
-					<p class="travel-banner-subtitle">Velit Auctor</p>
+					<h1 class="travel-banner-title">Discover <span class="travel-yellow-text">an unique</span> oppurtunity</h1>
+					<p class="travel-banner-subtitle">to expand your boundaries</p>
 				</div>
 				<img src="img/banner-3.jpg" alt="Image" />
 			</li>
