@@ -20,7 +20,6 @@
       include('header.php');
     ?>
 
-	<!-- gray bg -->
 	<section class="container travel-home-section-1" id="more">
 		<div class="section-margin-top">
 			<div class="row">
@@ -55,7 +54,6 @@
 		</div>
 	</section>
 
-	<!-- white bg -->
 	<section class="travel-white-bg section-padding-bottom">
 		<div class="container">
 			<div class="row">
