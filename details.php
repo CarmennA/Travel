@@ -59,6 +59,24 @@
 					$conn = null;
 					die('Query failed: ' . $e->getMessage());
 				}
+
+				$sql = "SELECT f.Name
+								FROM countries_filters cf
+								JOIN filters f ON f.Id = cf.FilterId
+								WHERE cf.CountryCode = :code";
+				$query = $conn->prepare($sql);
+				$query->bindParam(':code', $country);
+				try {
+					$query->execute();
+				} catch (PDOException $e) {
+					$conn = null;
+					die('Query failed: ' . $e->getMessage());
+				}
+				$countryFilters = [];
+
+				while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+						array_push($countryFilters, $row['Name']);
+				}
 				$conn = null;
 		}
 	}
@@ -80,7 +98,22 @@
 			      	<h3 class="slider-subtitle">Capital: <?php echo $result['capital']; ?></h3>
 			      	<p class="slider-description"><?php echo $result['name']; ?> is in region <?php echo $result['region']; ?>
 								and in the subregion of the <?php echo $result['subregion']; ?>. <br><br>
-							</p>
+							Tags:
+							<?php
+							// var_dump( $countryFilters);
+								$counter = 1;
+								foreach($countryFilters as $filter)
+								{
+										if ($counter == count($countryFilters))
+										{
+											echo $filter;
+										}
+										else {
+											echo $filter.',';
+										}
+										$counter++;
+								}
+								?>.</p>
 			      	<div class="slider-social">
 			      		<a class="travel-social-icon"><i class="fa fa-twitter"></i></a>
 			      		<a class="travel-social-icon"><i class="fa fa-facebook"></i></a>
