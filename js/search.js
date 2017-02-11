@@ -33,6 +33,7 @@ var AutocompleteSearch = (function() {
             filtered.forEach(function(element) {
                 var spanTag = document.createElement('span');
                 spanTag.setAttribute('onclick', "AutocompleteSearch.selectCountry('" + element.name + "', '" + element.code + "');");
+                spanTag.setAttribute('style', "cursor: pointer;");
                 spanTag.innerHTML = element.name;
                 dropdown.appendChild(spanTag);
             }, this);
