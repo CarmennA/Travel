@@ -47,6 +47,7 @@
 				$result = CallAPI("GET", "https://restcountries.eu/rest/v1/alpha/{$country}");
 			  // echo $result["capital"];
 				// var_dump($result);
+				$borders = $result['borders'];
 
 				$conn = CreateConnectionToDatabase();
 				$sql = "CALL update_counters(:code)";
@@ -60,8 +61,6 @@
 				}
 				$conn = null;
 		}
-
-		$borders = $result['borders'];
 	}
 	// echo count($errors);
 	// $countErrors = count($errors);
