@@ -72,7 +72,7 @@
 			</li>
 			<li>
 				<div class="travel-banner-inner">
-					<h1 class="travel-banner-title">Discover <span class="travel-yellow-text">an unique</span> oppurtunity</h1>
+					<h1 class="travel-banner-title">Discover <span class="travel-yellow-text">an unique</span> opportunity</h1>
 					<p class="travel-banner-subtitle">to expand your boundaries</p>
 				</div>
 				<img src="img/banner-3.jpg" alt="Image" />
