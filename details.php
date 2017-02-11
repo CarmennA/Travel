@@ -25,6 +25,7 @@
 	<?php
 	include 'restConsumer.php';
 	include 'connectionToDatabase.php';
+	include 'common.php';
 
 	$country = "";
 	$errors = array();
@@ -59,6 +60,8 @@
 				}
 				$conn = null;
 		}
+
+		$borders = $result['borders'];
 	}
 	// echo count($errors);
 	// $countErrors = count($errors);
@@ -67,67 +70,68 @@
 
 	<?php if(count($errors) == 0): ?>
 
-			<!-- gray bg -->
 	<section class="container travel-home-section-1 details-zindex" id="more">
 		<div class="row">
-			<!-- slider -->
 			<div class="flexslider flexslider-about effect2">
 			  <ul class="slides">
 			    <li>
-			      <img src="img/about-1.jpg" alt="image" />
+			      <img src="<?php echo image_exists("img/Countries/".$country.".jpg") ?>" alt="image" />
 			      <div class="flex-caption">
-			      	<h2 class="slider-title">Welcome To Holiday</h2>
-			      	<h3 class="slider-subtitle">Gravida nibh vel velit auctor aliquet enean sollicitudin lorem quis auctor</h3>
-			      	<p class="slider-description">Holiday is free Bootstrap v3.3.5 responsive template for tour and travel websites. You can download and use this layout for any purpose. You do not need to provide a credit link to us. If you have any question, feel free to <a href="http://www.facebook.com/travel" target="_parent">contact us</a>. <br><br>
-                    Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum.</p>
+			      	<h2 class="slider-title"><?php echo $result['name']; ?></h2>
+			      	<h3 class="slider-subtitle">Capital: <?php echo $result['capital']; ?></h3>
+			      	<p class="slider-description"><?php echo $result['name']; ?> is in region <?php echo $result['region']; ?>
+								and in the subregion of the <?php echo $result['subregion']; ?>. <br><br>
+							</p>
 			      	<div class="slider-social">
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-twitter"></i></a>
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-facebook"></i></a>
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-pinterest"></i></a>
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-google-plus"></i></a>
+			      		<a class="travel-social-icon"><i class="fa fa-twitter"></i></a>
+			      		<a class="travel-social-icon"><i class="fa fa-facebook"></i></a>
+			      		<a class="travel-social-icon"><i class="fa fa-pinterest"></i></a>
+			      		<a class="travel-social-icon"><i class="fa fa-google-plus"></i></a>
 			      	</div>
 			      </div>
 			    </li>
 			    <li>
-			      <img src="img/about-1.jpg" alt="image" />
+			      <img src="<?php echo image_exists("img/Countries/".$country.".jpg") ?>" alt="image" />
 			      <div class="flex-caption">
-			      	<h2 class="slider-title">Thank you for choosing us!</h2>
-			      	<h3 class="slider-subtitle">Gravida nibh vel velit auctor aliquet enean sollicitudin lorem quis auctor, nisi elit consequat ipsum</h3>
-			      	<p class="slider-description">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br><br>
-                    Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris gestas quam, ut aliquam massa nisi.</p>
+			      	<h2 class="slider-title">Interesting Facts</h2>
+			      	<!-- <h3 class="slider-subtitle"></h3> -->
+			      	<p class="slider-description">The Population of <?php echo $result['name']; ?> is <?php echo $result['population']; ?>. <br/><br/>
+                    The demonym for the natives is <?php echo $result['demonym']; ?>. </p>
 			      	<div class="slider-social">
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-twitter"></i></a>
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-facebook"></i></a>
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-pinterest"></i></a>
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-google-plus"></i></a>
+			      		<a class="travel-social-icon"><i class="fa fa-twitter"></i></a>
+			      		<a class="travel-social-icon"><i class="fa fa-facebook"></i></a>
+			      		<a class="travel-social-icon"><i class="fa fa-pinterest"></i></a>
+			      		<a class="travel-social-icon"><i class="fa fa-google-plus"></i></a>
 			      	</div>
 			      </div>
 			    </li>
 			    <li>
-			      <img src="img/about-1.jpg" alt="image" />
+			      <img src="<?php echo image_exists("img/Countries/".$country.".jpg") ?>" alt="image" />
 			      <div class="flex-caption">
-			      	<h2 class="slider-title">More Programs to come</h2>
-			      	<h3 class="slider-subtitle">Gravida nibh vel velit auctor aliquet enean sollicitudin lorem quis auctor, nisi elit consequat ipsum</h3>
-			      	<p class="slider-description">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris gestas quam, ut aliquam massa nisi.</p>
+			      	<h2 class="slider-title">More</h2>
+			      	<!-- <h3 class="slider-subtitle"></h3> -->
+			      	<p class="slider-description">The TimeZone of <?php echo $result['name']; ?> is <?php echo "'".$result['timezones'][0]."'"; ?>. <br/><br/>
+							The borders are:
+							<?php
+								$counter = 1;
+								foreach($borders as $border)
+								{
+										if ($counter == count($borders))
+										{
+											echo "'".$border."'.";
+										}
+										else {
+											echo "'".$border."', ";
+										}
+										$counter++;
+								}
+								?> <br/><br/>
+							The currency code of <?php echo $result['name']; ?> is <?php echo $result['currencies'][0]; ?>. </p>
 			      	<div class="slider-social">
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-twitter"></i></a>
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-facebook"></i></a>
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-pinterest"></i></a>
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-google-plus"></i></a>
-			      	</div>
-			      </div>
-			    </li>
-			    <li>
-			      <img src="img/about-1.jpg" alt="image" />
-			      <div class="flex-caption">
-			      	<h2 class="slider-title">Tour and Travel</h2>
-			      	<h3 class="slider-subtitle">Gravida nibh vel velit auctor aliquet enean sollicitudin lorem quis auctor, nisi elit consequat ipsum</h3>
-			      	<p class="slider-description">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris gestas quam, ut aliquam massa nisi.</p>
-			      	<div class="slider-social">
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-twitter"></i></a>
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-facebook"></i></a>
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-pinterest"></i></a>
-			      		<a href="#" class="travel-social-icon"><i class="fa fa-google-plus"></i></a>
+			      		<a class="travel-social-icon"><i class="fa fa-twitter"></i></a>
+			      		<a class="travel-social-icon"><i class="fa fa-facebook"></i></a>
+			      		<a class="travel-social-icon"><i class="fa fa-pinterest"></i></a>
+			      		<a class="travel-social-icon"><i class="fa fa-google-plus"></i></a>
 			      	</div>
 			      </div>
 			    </li>

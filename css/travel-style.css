@@ -1,6 +1,6 @@
 /* TRAVEL SITE CSS */
 
-/* CSS Resets */
+/* CSS */
 ul,p {
 	margin: 0;
 	padding: 0;
@@ -59,7 +59,6 @@ body { overflow-x: hidden; }
 	color: #000;
 }
 
-/* Banner */
 .travel-banner-inner {
     height: auto;
     margin: auto;
@@ -126,7 +125,7 @@ body { overflow-x: hidden; }
 	height: 50px;
 }
 
-/* Section 1, index.htravell */
+/* Section 1, index.travel */
 .travel-gray-bg { background-color: #E5E5E5; }
 .travel-home-section-1 {
 	position: relative;
@@ -139,19 +138,16 @@ body { overflow-x: hidden; }
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(252, 221, 68, 0.6);
 }
 .travel-yellow-gradient-bg {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5d11d+0,f3d10e+1,efcf1c+2,fccd0d+4,f7ca0d+5,f9cb1e+6,f7cb10+7,f8cc14+8,f0c40c+54,edc50c+55,e9c108+71,ecc008+78,e6be06+91,e9bd06+93,e8bc06+100 */
 	background: #f5d11d; /* Old browsers */ /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
 	background: linear-gradient(to bottom,  #f5d11d 0%,#f3d10e 1%,#efcf1c 2%,#fccd0d 4%,#f7ca0d 5%,#f9cb1e 6%,#f7cb10 7%,#f8cc14 8%,#f0c40c 54%,#edc50c 55%,#e9c108 71%,#ecc008 78%,#e6be06 91%,#e9bd06 93%,#e8bc06 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5d11d', endColorstr='#e8bc06',GradientType=0 ); /* IE6-9 */
 }
 .travel-green-gradient-bg {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2ec66b+0,2dc970+1,2ac96c+2,2bc76e+4,2bc869+5,2ac871+6,29c86c+7,28c76b+15,2bc76c+16,21bb61+73,1eb860+100 */
 	background: #2ec66b; /* Old browsers */ /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
 	background: linear-gradient(to bottom,  #2ec66b 0%,#2dc970 1%,#2ac96c 2%,#2bc76e 4%,#2bc869 5%,#2ac871 6%,#29c86c 7%,#28c76b 15%,#2bc76c 16%,#21bb61 73%,#1eb860 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ec66b', endColorstr='#1eb860',GradientType=0 ); /* IE6-9 */
 }
 .travel-red-gradient-bg {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e97262+0,ef6865+1,ed6c5f+2,f07162+4,f17062+5,eb6f67+6,ec6c5f+7,ec6b5e+18,eb5d4f+56,e95242+100 */
 	background: #e97262; /* Old browsers */ /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
 	background: linear-gradient(to bottom,  #e97262 0%,#ef6865 1%,#ed6c5f 2%,#f07162 4%,#f17062 5%,#eb6f67 6%,#ec6c5f 7%,#ec6b5e 18%,#eb5d4f 56%,#e95242 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e97262', endColorstr='#e95242',GradientType=0 ); /* IE6-9 */
@@ -194,10 +190,6 @@ body { overflow-x: hidden; }
 }
 .travel-form-inner { padding: 35px 30px 5px; }
 
-/*http://cssdeck.com/labs/different-css3-box-shadows-effects*/
-/*==================================================
- * Effect 2
- * ===============================================*/
 .effect2
 {
   position: relative;
@@ -239,38 +231,7 @@ body { overflow-x: hidden; }
 	margin-left: auto;
 }
 .input-group-addon { border-radius: 0; }
-#hotelCarTabs {
-	border-bottom: none;
-	height: 52px;
-}
-#hotelCarTabs li {
-	width: 50%;
-	height: 100%;
-}
-#hotelCarTabs > li > a {
-	margin-right: 0;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	text-align: center;
-	text-transform: uppercase;
-	background: transparent linear-gradient(to bottom, #F5D11D 0%, #F3D10E 1%, #EFCF1C 2%, #FCCD0D 4%, #F7CA0D 5%, #F9CB1E 6%, #F7CB10 7%, #F8CC14 8%, #F0C40C 54%, #EDC50C 55%, #E9C108 71%, #ECC008 78%, #E6BE06 91%, #E9BD06 93%, #E8BC06 100%) repeat scroll 0% 0%;
-	border: none;
-	border-radius: 0;
-	color: #5C4905;
-	font-weight: 600;
-}
-#hotelCarTabs > li > a:hover,
-#hotelCarTabs > li > a:focus {
-	border: none;
-	background: #F9E58B;
-}
-#hotelCarTabs > li.active > a,
-#hotelCarTabs > li.active > a:focus,
-#hotelCarTabs > li.active > a:hover
-{
-	background: transparent;
-	border: none;
-}
+
 /* Footer */
 .travel-black-bg { background-color: #000; }
 .travel-copyright-text {
@@ -289,7 +250,6 @@ body { overflow-x: hidden; }
 
 .hotel-search-form .form-group { margin-bottom: 30px; }
 
-/*Section 2, index.htravell */
 .section-margin-top { margin-top: 100px; }
 hr { border-top: 1px solid #111010; }
 .travel-section-header {
@@ -369,7 +329,6 @@ hr { border-top: 1px solid #111010; }
 .travel-home-box-3-description { padding: 40px 30px 44px; }
 .section-padding-bottom { padding-bottom: 60px; }
 
-/* Tours */
 .travel-tours-box-1 {
 	width: 100%;
 	max-width: 532px;
@@ -392,7 +351,7 @@ hr { border-top: 1px solid #111010; }
 	border-right: 1px solid #B1B1B1;
 	padding-right: 30px;
 }
-.travel-tours-box-1-info-right { padding-left: 30px; }
+.travel-tours-box-1-info-right { padding-left: 30px; padding-top: 5px;}
 .margin-bottom-20 { margin-bottom: 20px; }
 .margin-bottom-30 { margin-bottom: 30px; }
 .gray-text { color: #B1B1B1; }
@@ -460,7 +419,6 @@ hr { border-top: 1px solid #111010; }
 .margin-bottom-15 { margin-bottom: 15px; }
 .margin-bottom-5 { margin-bottom: 5px; }
 
-/* About */
 .about-section { margin-top: 150px; }
 .travel-about-box-1 {
 	background-color: white;
@@ -913,8 +871,25 @@ hr { border-top: 1px solid #111010; }
 }
 
 /* Popular more Css */
-.popular-zindex{
+.popular-sectionhome{
 	margin-top: 30px;
 	z-index: 0 !important;
 	top: 0;
+}
+
+.popular-css .popular-sectionhome .travel-tours-box-1 img{
+	width: 530px !important;
+	height: 238px !important;
+}
+
+.popular-css .tours-1-description {
+	border-style: none;
+	color: #1CA7C8;
+	width: 50px;
+	height: 30px;
+}
+
+.popular-css .tours-1-description:hover {
+	background-color: #1CA7C8;
+	color: white;
 }
