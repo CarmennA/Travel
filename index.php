@@ -123,11 +123,11 @@
 							<img src="img/index-07.jpg" alt="image" class="img-responsive">
 						</div>
 						<div class="travel-home-box-3-info">
-							<p class="travel-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
+							<p class="travel-home-box-3-description">Located at the mouth of the Hudson River in southeastern New York state, New York is one of the world's great cities. It is unrivaled in the diversity of its neighborhoods...</p>
 					        <div class="travel-home-box-2-container">
-							<a href="#" class="travel-home-box-2-link"><i class="fa fa-heart travel-home-box-2-icon border-right"></i></a>
+							<a class="travel-home-box-2-link"><i class="fa fa-heart travel-home-box-2-icon border-right"></i></a>
 							<span class="travel-home-box-2-description box-3">New York</span>
-							<a href="#" class="travel-home-box-2-link"><i class="fa fa-edit travel-home-box-2-icon border-left"></i></a>
+							<a class="travel-home-box-2-link"><i class="fa fa-edit travel-home-box-2-icon border-left"></i></a>
 						</div>
 						</div>
 					</div>
@@ -138,11 +138,11 @@
 							<img src="img/index-08.jpg" alt="image" class="img-responsive">
 						</div>
 						<div class="travel-home-box-3-info">
-							<p class="travel-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
+							<p class="travel-home-box-3-description">Paris is the city of love, inspiration, art and fashion. The night scene, the Eiffel tower and the warm atmosphere will make you feel directly at home...</p>
 					        <div class="travel-home-box-2-container">
-							<a href="#" class="travel-home-box-2-link"><i class="fa fa-heart travel-home-box-2-icon border-right"></i></a>
+							<a class="travel-home-box-2-link"><i class="fa fa-heart travel-home-box-2-icon border-right"></i></a>
 							<span class="travel-home-box-2-description box-3">Paris</span>
-							<a href="#" class="travel-home-box-2-link"><i class="fa fa-edit travel-home-box-2-icon border-left"></i></a>
+							<a class="travel-home-box-2-link"><i class="fa fa-edit travel-home-box-2-icon border-left"></i></a>
 						</div>
 						</div>
 					</div>
@@ -153,11 +153,11 @@
 							<img src="img/index-09.jpg" alt="image" class="img-responsive">
 						</div>
 						<div class="travel-home-box-3-info">
-							<p class="travel-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
+							<p class="travel-home-box-3-description">London is the largest city in Europe and located astride the famous river of Thames. London is considered as a safe tourist destination, visited by millions of people annually...</p>
 					        <div class="travel-home-box-2-container">
-							<a href="#" class="travel-home-box-2-link"><i class="fa fa-heart travel-home-box-2-icon border-right"></i></a>
-							<span class="travel-home-box-2-description box-3">Paris</span>
-							<a href="#" class="travel-home-box-2-link"><i class="fa fa-edit travel-home-box-2-icon border-left"></i></a>
+							<a class="travel-home-box-2-link"><i class="fa fa-heart travel-home-box-2-icon border-right"></i></a>
+							<span class="travel-home-box-2-description box-3">London</span>
+							<a class="travel-home-box-2-link"><i class="fa fa-edit travel-home-box-2-icon border-left"></i></a>
 						</div>
 						</div>
 					</div>
@@ -168,11 +168,11 @@
 							<img src="img/index-10.jpg" alt="image" class="img-responsive">
 						</div>
 						<div class="travel-home-box-3-info">
-							<p class="travel-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
+							<p class="travel-home-box-3-description">Greater Tokyo is the world's most populous metropolitan area and is the center of Japanese culture, finance, and government - a real bustling cosmopolitan city...</p>
 					        <div class="travel-home-box-2-container">
-							<a href="#" class="travel-home-box-2-link"><i class="fa fa-heart travel-home-box-2-icon border-right"></i></a>
-							<span class="travel-home-box-2-description box-3">New York</span>
-							<a href="#" class="travel-home-box-2-link"><i class="fa fa-edit travel-home-box-2-icon border-left"></i></a>
+							<a class="travel-home-box-2-link"><i class="fa fa-heart travel-home-box-2-icon border-right"></i></a>
+							<span class="travel-home-box-2-description box-3">Tokio</span>
+							<a class="travel-home-box-2-link"><i class="fa fa-edit travel-home-box-2-icon border-left"></i></a>
 						</div>
 						</div>
 					</div>

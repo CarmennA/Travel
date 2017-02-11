@@ -10,6 +10,7 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/search.css">
   <link rel="stylesheet" type="text/css" href="css/autocomplete.css">
+  <link rel="stylesheet" type="text/css" href="css/profile.css">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/flexslider.css" rel="stylesheet">
@@ -57,52 +58,60 @@
 		$errors = [];
 
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-			$username = modify_input($_POST['username']);
-			$password = modify_input($_POST['password']);
-
-			if (strlen($username) < 4) {
-				array_push($errors, 'Username must be at least 4 symbols.');
+			if ($_POST['submitType'] == 'Register') {
+				header('Location:register.php');
 			}
+			else {
 
-			if (strlen($username) > 50) {
-				array_push($errors, 'Username must be no more than 50 symbols.');
-			}
+				$username = modify_input($_POST['username']);
+				$password = modify_input($_POST['password']);
 
-			$id = login($username, $password);
-			if ($id == -1) {
-				array_push($errors, "Username already used.");
-			}
-
-			if (count($errors) > 0) {
-				echo '<ul style="color: red">';
-				foreach ($errors as $err) {
-					echo '<li>' . $err . '</li>';
+				if (strlen($username) < 4) {
+					array_push($errors, 'Username must be at least 4 symbols.');
 				}
-				echo '</ul>';
-			} else {
 
-				echo $id;
+				if (strlen($username) > 50) {
+					array_push($errors, 'Username must be no more than 50 symbols.');
+				}
 
-				$cookie_name = "user";
-				$cookie_value = $username . '_' . $id;
-				setcookie($cookie_name, $cookie_value, time() + (86400), "/"); // 86400 = 1 day
+				$id = login($username, $password);
+				if ($id == -1) {
+					array_push($errors, "Username already used.");
+				}
 
-				header('Location:profile.php');
+				if (count($errors) > 0) {
+					echo '<ul style="color: red">';
+					foreach ($errors as $err) {
+						echo '<li>' . $err . '</li>';
+					}
+					echo '</ul>';
+				} else {
+
+					echo $id;
+
+					$cookie_name = "user";
+					$cookie_value = $username . '_' . $id;
+					setcookie($cookie_name, $cookie_value, time() + (86400), "/"); // 86400 = 1 day
+
+					header('Location:profile.php');
+				}
 			}
 		}
 
 	?>
 
-	<form style="margin: 150px auto; width: 50%;" method="post" action="login.php">
-		<label for="username">Username:</label>
-		<input type="text" name="username" id="username" value="<?php echo $username; ?>" />
+	<form class="user-form" method="post" action="login.php">
+		<label class="form-label" for="username">Username:</label>
+		<input class="form-input" type="text" name="username" id="username" value="<?php echo $username; ?>" />
 		<br/>
 		<br/>
-		<label for="password">Password:</label>
-		<input type="password" id="password" />
+		<label class="form-label" for="password">Password:</label>
+		<input class="form-input" type="password" id="password" />
 		<input type="hidden" name="password" id="passwordEnc"/>
-    	<input style="display: block;" type="submit" name="submitType" value="Login" onclick="encryptPass();"/>
+		<div>
+			<input class="form-button" type="submit" name="submitType" value="Login" onclick="encryptPass();"/>
+			<input class="form-button-second" type="submit" name="submitType" value="Register"/>
+		</div>
 	</form>
 
   <?php

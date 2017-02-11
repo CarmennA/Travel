@@ -10,6 +10,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/search.css">
   <link rel="stylesheet" type="text/css" href="css/autocomplete.css">
+  <link rel="stylesheet" type="text/css" href="css/profile.css">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/flexslider.css" rel="stylesheet">
@@ -102,15 +103,17 @@
 
 	?>
 
-	<form style="margin: 150px auto; width: 50%;" method="post" action="register.php">
-		<label for="username">Username:</label>
-		<input type="text" name="username" id="username" value="<?php echo $username; ?>" />
+	<form class="user-form" method="post" action="register.php">
+		<label class="form-label" for="username">Username:</label>
+		<input class="form-input" type="text" name="username" id="username" value="<?php echo $username; ?>" />
 		<br/>
 		<br/>
-		<label for="password">Password:</label>
-		<input type="password" id="password" />
+		<label class="form-label" for="password">Password:</label>
+		<input class="form-input" type="password" id="password" />
 		<input type="hidden" name="password" id="passwordEnc"/>
-    	<input style="display: block;" type="submit" name="submitType" value="Register" onclick="encryptPass();"/>
+		<div>
+    		<input class="form-button-second" type="submit" name="submitType" value="Register" onclick="encryptPass();"/>
+		</div>
 	</form>
 
   <?php

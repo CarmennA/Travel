@@ -1,0 +1,41 @@
+.user-form {
+    margin: 150px auto; 
+    width: 20%;
+    font-size: 16px;
+    color: #FC8B44;
+}
+
+.form-button {
+    margin-top: 25px; 
+    width: 70px; 
+    height: 30px; 
+    border-style: none;
+    font-size: 20px;
+}
+
+.form-button-second {
+    margin-top: 25px; 
+    width: 100px; 
+    height: 30px; 
+    border-style: none;
+    font-size: 20px;
+}
+
+.form-label {
+    margin-right: 25px;
+}
+
+.form-input {
+    border-style: none;
+}
+
+.right-separator {
+    margin-right: 20px !important;
+}
+
+.filter-form {
+    margin: 150px auto; 
+    width: 36%;
+    font-size: 24px;
+    color: #FC8B44;
+}

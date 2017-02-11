@@ -10,6 +10,7 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/search.css">
   <link rel="stylesheet" type="text/css" href="css/autocomplete.css">
+  <link rel="stylesheet" type="text/css" href="css/profile.css">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/flexslider.css" rel="stylesheet">
@@ -57,14 +58,16 @@
         $conn = null;
 	?>
 
-    <form action="profile.php" method="post">
-        <div style="margin: 150px auto; width: 50%;">
+    <form class="filter-form" action="profile.php" method="post">
+        <div class="col-lg-12 col-mg-12 col-sm-12">
             <?php foreach($results as $filter): ?>
-                <label for="filter_<?php echo $filter['Id']; ?>"><?php echo $filter['Name']; ?></label>
-                <input id="filter_<?php echo $filter['Id']; ?>" name="check_list[]" type="checkbox" <?php if ($filter['Selected'] == 1) echo 'checked'; ?> value="<?php echo $filter['Id']; ?>" />
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                    <label class="form-label" style="margin-right: 0px !important;" for="filter_<?php echo $filter['Id']; ?>"><?php echo $filter['Name']; ?></label>
+                    <input class="right-separator" id="filter_<?php echo $filter['Id']; ?>" name="check_list[]" type="checkbox" <?php if ($filter['Selected'] == 1) echo 'checked'; ?> value="<?php echo $filter['Id']; ?>" />
+                </div>
             <?php endforeach; ?>
-            <input type="submit" value="Update" />
         </div>
+            <input class="form-button-second" style="margin-left: 20px;" type="submit" value="Update" />
     </form>
 
     <?php
